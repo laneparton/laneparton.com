@@ -12,7 +12,7 @@ module.exports = {
   author: 'Lane Parton',
 
   // open graph metadata (optional)
-  description: 'Example site description',
+  description: 'Just my little home on the internet.',
   socialImageTitle: 'Lane Parton',
   socialImageSubtitle: 'Welcome, friends 👋',
 
