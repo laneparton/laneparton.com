@@ -28,13 +28,7 @@ import { Page404 } from './Page404'
 import { PageHead } from './PageHead'
 import { PageAside } from './PageAside'
 import { Footer } from './Footer'
-<<<<<<< HEAD
-import { PageSocial } from './PageSocial'
-import { ReactUtterances } from './ReactUtterances'
-=======
 import { NotionPageHeader } from './NotionPageHeader'
-import { GitHubShareButton } from './GitHubShareButton'
->>>>>>> 1fdecd6f82db23cdd221e9511e3909ed1c73467d
 
 import styles from './styles.module.css'
 
@@ -249,34 +243,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
   )
 
   const socialDescription =
-<<<<<<< HEAD
-    getPageDescription(block, recordMap) ?? config.description
-
-  let comments: React.ReactNode = null
-  let pageAside: React.ReactChild = null
-
-  // only display comments and page actions on blog post pages
-  if (isBlogPost) {
-    if (config.utterancesGitHubRepo) {
-      comments = (
-        <ReactUtterances
-          repo={config.utterancesGitHubRepo}
-          issueMap='issue-term'
-          issueTerm='title'
-          theme={darkMode.value ? 'photon-dark' : 'github-light'}
-        />
-      )
-    }
-
-    const tweet = getPageTweet(block, recordMap)
-    if (tweet) {
-      pageAside = <PageActions tweet={tweet} />
-    }
-  }
-=======
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
->>>>>>> 1fdecd6f82db23cdd221e9511e3909ed1c73467d
 
   return (
     <>
@@ -290,7 +258,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
       />
 
       {isLiteMode && <BodyClassName className='notion-lite' />}
-      {isDarkMode && <BodyClassName className='dark-mode' />}
+      {/* {isDarkMode && <BodyClassName className='dark-mode' />} */}
 
       <NotionRenderer
         bodyClassName={cs(
@@ -316,12 +284,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
         pageAside={pageAside}
         footer={footer}
       />
-<<<<<<< HEAD
-    </TwitterContextProvider>
-=======
-
-      <GitHubShareButton />
     </>
->>>>>>> 1fdecd6f82db23cdd221e9511e3909ed1c73467d
   )
 }
