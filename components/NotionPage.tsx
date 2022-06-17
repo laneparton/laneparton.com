@@ -18,7 +18,6 @@ import { getBlockTitle, getPageProperty, formatDate } from 'notion-utils'
 import { mapPageUrl, getCanonicalPageUrl } from 'lib/map-page-url'
 import { mapImageUrl } from 'lib/map-image-url'
 import { searchNotion } from 'lib/search-notion'
-import { useDarkMode } from 'lib/use-dark-mode'
 import * as types from 'lib/types'
 import * as config from 'lib/config'
 
@@ -176,8 +175,6 @@ export const NotionPage: React.FC<types.PageProps> = ({
   // lite mode is for oembed
   const isLiteMode = lite === 'true'
 
-  const { isDarkMode } = useDarkMode()
-
   const siteMapPageUrl = React.useMemo(() => {
     const params: any = {}
     if (lite) params.lite = lite
@@ -258,14 +255,13 @@ export const NotionPage: React.FC<types.PageProps> = ({
       />
 
       {isLiteMode && <BodyClassName className='notion-lite' />}
-      {/* {isDarkMode && <BodyClassName className='dark-mode' />} */}
 
       <NotionRenderer
         bodyClassName={cs(
           styles.notion,
           pageId === site.rootNotionPageId && 'index-page'
         )}
-        darkMode={isDarkMode}
+        darkMode={false}
         components={components}
         recordMap={recordMap}
         rootPageId={site.rootNotionPageId}
