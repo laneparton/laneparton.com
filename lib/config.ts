@@ -151,10 +151,10 @@ export const fathomConfig = fathomId
     }
   : undefined
 
-export const posthogId = process.env.NEXT_PUBLIC_POSTHOG_ID
-export const posthogConfig: posthog.Config = {
-  api_host: 'https://app.posthog.com'
-}
+// export const posthogId = process.env.NEXT_PUBLIC_POSTHOG_ID
+// export const posthogConfig: posthog.Config = {
+//   api_host: 'https://app.posthog.com'
+// }
 
 function cleanPageUrlMap(
   pageUrlMap: PageUrlOverridesMap,
