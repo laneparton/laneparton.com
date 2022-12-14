@@ -383,6 +383,22 @@
   display: none;
 }
 
+.notion-table-view {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.notion-collection {
+  max-width: 100%;
+}
+
+.notion-block-610dd81c84504f6a9c88aefcb5ce1104 {
+  text-align: center;
+}
+
+.notion-block-f176c56304af44dbb98fb833df927479 .notion-blue {
+  color: #0085ad;
+}
 
 @media only screen and (min-width: 920px) {
   .notion-table {
