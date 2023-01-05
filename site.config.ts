@@ -20,6 +20,9 @@ export default siteConfig({
   twitter: 'laneparton',
   github: 'laneparton',
   linkedin: 'lane-parton',
+  // mastodon: '#', // optional mastodon profile URL, provides link verification
+  // newsletter: '#', // optional newsletter URL
+  // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
 
   // default notion icon and cover images for site-wide consistency (optional)
   // page-specific values will override these site-wide defaults
