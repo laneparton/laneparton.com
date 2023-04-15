@@ -18,7 +18,7 @@ export const PageHead: React.FC<
   title = title ?? site?.name
   description = description ?? site?.description
 
-  const socialImageUrl = image || getSocialImageUrl(pageId)
+  const socialImageUrl = getSocialImageUrl(pageId) || image
 
   return (
     <Head>
