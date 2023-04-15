@@ -229,6 +229,8 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const canonicalPageUrl =
     !config.isDev && getCanonicalPageUrl(site, recordMap)(pageId)
 
+  const skipGenerateSocialImage = getPageProperty<boolean>('Don\'t Generate Social Image', block, recordMap) || false
+
   const socialImage = mapImageUrl(
     getPageProperty<string>('Social Image', block, recordMap) ||
       (block as PageBlock).format?.page_cover ||
@@ -248,6 +250,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         title={title}
         description={socialDescription}
         image={socialImage}
+        skipGenerateSocialImage={skipGenerateSocialImage}
         url={canonicalPageUrl}
       />
 

@@ -9,16 +9,19 @@ export const PageHead: React.FC<
   types.PageProps & {
     title?: string
     description?: string
-    image?: string
+    image?: string,
+    skipGenerateSocialImage?: boolean,
     url?: string
   }
-> = ({ site, title, description, pageId, image, url }) => {
+> = ({ site, title, description, pageId, image, skipGenerateSocialImage, url }) => {
   const rssFeedUrl = `${config.host}/feed`
 
   title = title ?? site?.name
   description = description ?? site?.description
 
-  const socialImageUrl = image || getSocialImageUrl(pageId)
+  console.log(skipGenerateSocialImage)
+
+  const socialImageUrl = skipGenerateSocialImage ? image || getSocialImageUrl(pageId) : image
 
   return (
     <Head>
