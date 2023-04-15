@@ -38,3 +38,11 @@ body {
   color: var(--fg-color);
   caret-color: var(--fg-color);
 }
+
+.notion-block-ba1b084b39d84b879b427b1b6a4d5384 .notion-collection-page-properties {
+  display: none;
+}
+
+.notion-block-ba1b084b39d84b879b427b1b6a4d5384 .notion-aside {
+  display: none;
+}
