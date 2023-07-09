@@ -3,9 +3,14 @@
     <article class="container">
       <ContentDoc v-slot="{ doc }">
         <div v-if="doc.hero">
-          <img class="hero-image rounded-3" :src="doc.hero">
+          <img
+            class="hero-image rounded-3"
+            :src="doc.hero"
+          >
         </div>
-        <h1 class="mb-0">{{ doc.title }}</h1>
+        <h1 class="mb-0">
+          {{ doc.title }}
+        </h1>
         <div class="byline">
           Published: <time :datetime="doc.published">{{ dayjs(doc.published).format("MMMM D, YYYY") }}</time>
         </div>

@@ -774,7 +774,7 @@
         border-top: 1px solid darken($light,2%);
         border-bottom: 1px solid darken($light,2%);
         background-color: $topnav-bg;
-        box-shadow: $shadow;
+        //box-shadow: $shadow;
         &.open {
             display: block;
             overflow-y: auto;

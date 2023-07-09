@@ -2,11 +2,11 @@
   <main class="page">
     <div class="container intro">
       <div class="row">
-        <div class="col-12 col-lg-3 col-md-6 text-center">
+        <div class="col-10 col-lg-3 col-md-5 text-center mx-auto">
           <img
             src="/images/Headshot.png"
             alt="Placeholder Headshot"
-            class="img-fluid rounded-circle mb-3 mb-md-0 px-4"
+            class="img-fluid rounded-circle mb-5 mb-lg-3 px-4"
           >
         </div>
         <div class="col-12 col-md-6 col-lg-9 d-flex flex-column justify-content-center">
@@ -79,7 +79,7 @@
       </div>
     </div>
 
-    <div class="container py-115">
+    <div class="container blog">
       <BlogFeed
         :data="data"
         :post-limit="5"
@@ -99,14 +99,9 @@
 </template>
 
 <script setup lang="ts">
-// import { useTwitterFeed } from '../composables/use-twitter-feed'
-
-// const { tweets } = useTwitterFeed()
-
 const { data } = await useAsyncData("posts", () =>
   queryContent("posts").sort({ published: -1 }).limit(5).find()
 );
-
 </script>
 
 <style lang="scss" scoped>
@@ -130,6 +125,16 @@ const { data } = await useAsyncData("posts", () =>
 }
 
 .intro {
-  margin-top: 100px;
+  @media (min-width: 992px) {
+    margin-top: 100px;
+  }
 }
+.blog {
+  margin-top: 50px;
+  @media (min-width: 992px) {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+}
+
 </style>

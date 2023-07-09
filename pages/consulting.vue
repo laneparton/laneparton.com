@@ -16,7 +16,7 @@
 
     <section class="section">
       <div class="container">
-        <div class="row mt-100">
+        <div class="row">
           <div class="col-lg-8 col-12">
             <h2>Let's Work Together!</h2>
             <p>
@@ -179,7 +179,12 @@
 
 <style lang="scss" scoped>
 .hero {
-    padding-top: 50px;
+    margin-bottom: 50px;
+
+    @media (min-width: 992px) {
+      padding-top: 50px;
+      margin-bottom: 100px;
+    }
 }
 
 .custom-card {

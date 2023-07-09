@@ -1,18 +1,5 @@
 <template>
   <main class="page">
-    <!-- Start Home -->
-    <!-- <section class="bg-half">
-      <div class="bg-overlay bg-linear-gradient-2" />
-      <div class="section-title position-absolute bottom-0 text-center end-0 start-0">
-        <h2 class="text-muted title-dark-50 mb-0 fs-5">
-          Hey there! I'm Lane.
-        </h2>
-        <h1 class="mt-0">
-          Get to Know Me
-        </h1>
-      </div>
-    </section> -->
-
     <section class="intro">
       <div class="container">
         <div class="row gy-4 align-items-center">
@@ -97,7 +84,9 @@ const cliffNotes = [
 <style lang="scss" scoped>
 .intro {
   position: relative;
-  padding: 100px 0;
+  @media (min-width: 992px) {
+    padding: 100px 0;
+  }
 }
 .custom-card {
     background-color: #212f40;

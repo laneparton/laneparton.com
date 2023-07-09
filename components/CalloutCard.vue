@@ -20,7 +20,7 @@ const props = defineProps({
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .custom-card {
     background-color: #212f40;
     border: 1px solid #2f435b;

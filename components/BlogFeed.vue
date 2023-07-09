@@ -82,24 +82,31 @@ const props = defineProps({
   border-bottom: 1px solid rgba(55, 53, 47, 0.16);
 }
 
-.blog-post-title,
-.blog-post-date {
+.blog-post-title {
   border-right: 1px solid #9bacc4;
+}
+
+.blog-post-date {
+  max-width: 40%;
+  @media (min-width: 992px) {
+    max-width: 25%;
+    border-right: 1px solid #9bacc4;
+  }
 }
 
 .blog-post-header .icon {
   margin-right: 5px;
 }
 
-.blog-post-col.blog-post-date {
-  max-width: 25%;
-}
-
 .blog-post-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: flex-start;
+  display: none;
+
+  @media (min-width: 992px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-start;
+  }
 
   .badge {
     font-size: 14px;
