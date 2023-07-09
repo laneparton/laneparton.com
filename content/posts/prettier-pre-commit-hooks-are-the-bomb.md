@@ -21,7 +21,7 @@ It’s pretty satisfying, watching Git do the work for you. Basically, everythin
 
 But the implementation I’m most interested in boils down to this magic command:
 
-```
+```Shell
 npx mrm@2 lint-staged
 ```
 

@@ -1,7 +1,7 @@
 <template>
   <main class="page">
-    <div class="entry-content pt-40">
-      <div class="container mt-100 mt-35-res">
+    <div class="entry-content">
+      <div class="container mt-100">
         <div class="row">
           <div class="col-12 col-lg-3 col-md-6 text-center">
             <img
@@ -95,13 +95,15 @@
           :data="data"
           :post-limit="5"
         />
-        <div class="mt-4">
-          <NuxtLink
-            to="/posts"
-            class="text-primary"
-          >
-            See More <font-awesome-icon icon="fa-solid fa-arrow-right" />
-          </NuxtLink>
+        <div class="row">
+          <div class="col mt-4">
+            <NuxtLink
+              to="/posts"
+              class="text-primary"
+            >
+              See More <font-awesome-icon icon="fa-solid fa-arrow-right" />
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>
@@ -146,6 +148,7 @@ const { data } = await useAsyncData("posts", () =>
     font-size: 1.25rem;
     font-weight: 500;
     position: relative;
+    margin-bottom: 1.5rem;
 
     &::after {
         content: "";

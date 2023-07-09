@@ -2,7 +2,7 @@
 title: What should a real-world Vue 3 app look like?
 description: While researching Vue 3 applications, I noticed a handful of interesting patterns.
 published: 2023-01-05
-Social Image: https://frontendmasters.com/static-assets/learn/og-learning-path-vue.jpg
+hero: https://frontendmasters.com/static-assets/learn/og-learning-path-vue.jpg
 tags:
     - Development
     - JavaScript
@@ -16,7 +16,6 @@ Two months ago I started a new role building and maintaining a Vue 2 application
 
 <aside>
 💡 Most importantly (at this stage), how do we organize our code in an elegant way that adheres to Vue’s style guide?
-
 </aside>
 
 During my research, I noticed a handful of patterns and practices that stood out - especially from the perspective of organization:
@@ -35,13 +34,11 @@ In the examples I looked at, it was common practice to split this file into smal
 
 I found the naming convention for where these were located to be interesting. In some instances it was `/plugins/` while in others it was `/modules/`. I’d love to find more examples to solidify my own preference, but in the end it’s all personal/team preference.
 
-### **Examples**
+### Examples
 
-[vue3-realworld-example-app/src/plugins at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src/plugins)
-
-[vitesse/src/modules at main · antfu/vitesse](https://github.com/antfu/vitesse/tree/main/src/modules)
-
-[hoppscotch/packages/hoppscotch-common/src/modules at main · hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch/tree/main/packages/hoppscotch-common/src/modules)
+1. [vue3-realworld-example-app/src/plugins at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src/plugins)
+2. [vitesse/src/modules at main · antfu/vitesse](https://github.com/antfu/vitesse/tree/main/src/modules)
+3. [hoppscotch/packages/hoppscotch-common/src/modules at main · hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch/tree/main/packages/hoppscotch-common/src/modules)
 
 ## 2.  It follows casing standards religiously
 
@@ -58,21 +55,19 @@ PascalCase works best with autocompletion in code editors, as it's consistent wi
 
 In the examples I found, there was a mix of casing standards. Most of them favored PascalCase SFC with camelCase JS/TS. Although, my own preference after seeing all of them is the kebab-case everywhere that [Directus](https://github.com/directus/directus/tree/main/app/src/components) uses (something about it just felt more cohesive).
 
-### **PascalCase SFC, camelCase JavaScript/TypeScript, and kebab-case directories**
+### PascalCase SFC, camelCase JavaScript/TypeScript, and kebab-case directories
 
-[hoppscotch/packages/hoppscotch-common/src at main · hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch/tree/main/packages/hoppscotch-common/src)
+1. [hoppscotch/packages/hoppscotch-common/src at main · hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch/tree/main/packages/hoppscotch-common/src)
+2. [vitesse/src at main · antfu/vitesse](https://github.com/antfu/vitesse/tree/main/src)
+3. [slidev/packages/client at main · slidevjs/slidev](https://github.com/slidevjs/slidev/tree/main/packages/client)
 
-[vitesse/src at main · antfu/vitesse](https://github.com/antfu/vitesse/tree/main/src)
+### PascalCase SFC and kebab-case everything else
 
-[slidev/packages/client at main · slidevjs/slidev](https://github.com/slidevjs/slidev/tree/main/packages/client)
+1. [vue3-realworld-example-app/src at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src)
 
-### **PascalCase SFC and kebab-case everything else**
+### Kebab-case everywhere
 
-[vue3-realworld-example-app/src at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src)
-
-### **Kebab-case everywhere**
-
-[directus/app/src/components at main · directus/directus](https://github.com/directus/directus/tree/main/app/src/components)
+1. [directus/app/src/components at main · directus/directus](https://github.com/directus/directus/tree/main/app/src/components)
 
 ## 3. Type organization is predictable
 
@@ -84,11 +79,9 @@ Finally - local types are colocated alongside or inside the files that need them
 
 ### Examples
 
-[directus/app/src/types at main · directus/directus](https://github.com/directus/directus/tree/main/app/src/types)
-
-[slidev/types.ts at main · slidevjs/slidev](https://github.com/slidevjs/slidev/blob/main/packages/client/internals/types.ts)
-
-[vue3-realworld-example-app/src/types at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src/types)
+1. [directus/app/src/types at main · directus/directus](https://github.com/directus/directus/tree/main/app/src/types)
+2. [slidev/types.ts at main · slidevjs/slidev](https://github.com/slidevjs/slidev/blob/main/packages/client/internals/types.ts)
+3. [vue3-realworld-example-app/src/types at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src/types)
 
 ## 4. It uses next-gen state management (hint: Pinia)
 
@@ -96,17 +89,15 @@ Using a state management system can help improve the organization and maintainab
 
 In the applications that I looked at (specifically for Vue 3), I found that most projects were using Pinia. While digging around on opinions, I found a tweet that provides some context around the direction of Vue’s preferred state management library:
 
-[https://twitter.com/youyuxi/status/1463429442076745730?lang=en](https://twitter.com/youyuxi/status/1463429442076745730?lang=en)
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Pinia is de facto Vuex 5! At this point it’s really a naming/branding issue.</p>&mdash; Evan You (@youyuxi) <a href="https://twitter.com/youyuxi/status/1463429442076745730?ref_src=twsrc%5Etfw">November 24, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 You can also read further about this directly in the [Vue documentation](https://vuejs.org/guide/scaling-up/state-management.html#pinia) (which I found later 😀).
 
 ### Examples
 
-[vue3-realworld-example-app/src at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src)
-
-[directus/app/src at main · directus/directus](https://github.com/directus/directus/tree/main/app/src)
-
-[vitesse/src at main · antfu/vitesse](https://github.com/antfu/vitesse/tree/main/src)
+1. [vue3-realworld-example-app/src at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src)
+2. [directus/app/src at main · directus/directus](https://github.com/directus/directus/tree/main/app/src)
+3. [vitesse/src at main · antfu/vitesse](https://github.com/antfu/vitesse/tree/main/src)
 
 ## 5. It makes heavy use of composables (hence, the Composition API)
 
@@ -122,15 +113,11 @@ Overall, composables are a powerful and useful addition to the Vue ecosystem, an
 
 ### Examples
 
-[directus/app/src/composables at main · directus/directus](https://github.com/directus/directus/tree/main/app/src/composables)
-
-[slidev/packages/client/composables at main · slidevjs/slidev](https://github.com/slidevjs/slidev/tree/main/packages/client/composables)
-
-[vue3-realworld-example-app/src/composable at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src/composable)
-
-[vitesse/src/composables at main · antfu/vitesse](https://github.com/antfu/vitesse/tree/main/src/composables)
-
-[hoppscotch/packages/hoppscotch-common/src/composables at main · hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch/tree/main/packages/hoppscotch-common/src/composables)
+1. [directus/app/src/composables at main · directus/directus](https://github.com/directus/directus/tree/main/app/src/composables)
+2. [slidev/packages/client/composables at main · slidevjs/slidev](https://github.com/slidevjs/slidev/tree/main/packages/client/composables)
+3. [vue3-realworld-example-app/src/composable at master · mutoe/vue3-realworld-example-app](https://github.com/mutoe/vue3-realworld-example-app/tree/master/src/composable)
+4. [vitesse/src/composables at main · antfu/vitesse](https://github.com/antfu/vitesse/tree/main/src/composables)
+5. [hoppscotch/packages/hoppscotch-common/src/composables at main · hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch/tree/main/packages/hoppscotch-common/src/composables)
 
 ## There’s plenty more to explore…
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <h2>Latest Posts</h2>
     <div
       class="blog-post-list"

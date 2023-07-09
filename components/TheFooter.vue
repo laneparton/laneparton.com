@@ -8,7 +8,7 @@
       <div class="row">
         <div class="site-info col-md-6 col-12">
           <p class="copyright">
-            © 2023 Lane Parton
+            &copy; {{ currentYear }} Lane Parton
           </p>
         </div>
         <nav
@@ -53,6 +53,17 @@
     </div>
   </footer>
 </template>
+
+<script lang="ts" setup>
+import { computed } from 'vue'
+const currentYear = computed(() => getCurrentYear())
+
+function getCurrentYear() {
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  return currentYear;
+}
+</script>
 
 <style lang="scss" scoped>
 @import 'bootstrap/scss/bootstrap-grid';
