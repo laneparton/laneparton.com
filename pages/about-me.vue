@@ -55,7 +55,7 @@
       </div>
       <div class="mt-100">
         <div class="container">
-          <h2>
+          <h2 class="mb-4">
             Recent Memories
           </h2>
           <InstagramBlock />

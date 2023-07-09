@@ -166,7 +166,7 @@
                 Ready to enhance your online presence?
               </h2>
               <a
-                href="javascript:void(0)"
+                href="mailto:hello@laneparton.com"
                 class="btn btn-primary"
               >Let's Chat</a>
             </div>
