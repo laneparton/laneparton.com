@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         documentDriven: true,
     },
     runtimeConfig: {
-        instagramToken: "",
+        instagramToken: process.env.INSTAGRAM_TOKEN,
         public: {
             siteUrl: 'https://laneparton.com',
             siteName: 'Lane Parton',
