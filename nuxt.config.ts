@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         documentDriven: true,
     },
     runtimeConfig: {
-        instagramToken: "IGQVJVUGZAsN2JFX3Bjams3NFVFNTBnMnhndEhfNFBZAbzRNTk5JMUVLMGZAYQlBFckJxM2ZATNVZAMX3FtWF9ub1V1N2NzWmFsMHV1Wkc0Nk1FSHMyZAkQxMWozTHNqVE04MW1kYXRUajFRNldyZAkFjcDhBbAZDZD",
+        instagramToken: "",
         public: {
             siteUrl: 'https://laneparton.com',
             siteName: 'Lane Parton',
