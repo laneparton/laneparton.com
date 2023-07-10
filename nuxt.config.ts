@@ -5,9 +5,6 @@ export default defineNuxtConfig({
         '@nuxt/content',
         '@nuxtjs/eslint-module'
     ],
-    content: {
-        documentDriven: true,
-    },
     runtimeConfig: {
         instagramToken: process.env.INSTAGRAM_TOKEN,
         public: {
@@ -25,6 +22,7 @@ export default defineNuxtConfig({
     ],
     build: {
         transpile: [
+            '@fortawesome/vue-fontawesome',
             '@yeger/vue-masonry-wall'
         ],
     },

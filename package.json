@@ -24,7 +24,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
-    "@yeger/vue-masonry-wall": "^4.0.4",
+    "@yeger/vue-masonry-wall": "^4.1.0",
     "bootstrap": "^5.2.3",
     "dayjs": "^1.11.7"
   }

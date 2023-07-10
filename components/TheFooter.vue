@@ -44,7 +44,7 @@
                 class="mx-2"
                 target="_blank"
               >
-                <font-awesome-icon icon="fa-brands fa-twitter" />
+                <font-awesome-icon :icon="['fab', 'twitter']" />
               </a>
             </li>
           </ul>

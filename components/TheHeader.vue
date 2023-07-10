@@ -20,7 +20,7 @@
             @click="toggleNav"
           >
             <span class="btn btn-icon btn-pills btn-primary">
-              <font-awesome-icon icon="fa-solid fa-bars" />
+              <font-awesome-icon :icon="['fas', 'fa-bars']" />
             </span>
           </a>
         </li>
