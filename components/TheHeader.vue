@@ -18,16 +18,16 @@
       </NuxtLink>
       <ul class="buy-button list-inline mb-0">
         <li class="list-inline-item mb-0">
-          <a
+          <button
             data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasRight"
             aria-controls="offcanvasRight"
+            aria-label="Open"
             @click="toggleNav"
+            class="btn btn-icon btn-pills btn-primary"
           >
-            <span class="btn btn-icon btn-pills btn-primary">
-              <font-awesome-icon :icon="['fas', 'fa-bars']" />
-            </span>
-          </a>
+            <font-awesome-icon :icon="['fas', 'fa-bars']" />
+          </button>
         </li>
       </ul>
 
