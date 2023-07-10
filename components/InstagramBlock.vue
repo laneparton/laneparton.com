@@ -6,10 +6,11 @@
     :gap="16"
   >
     <template #default="{ item }">
-      <img
+      <nuxt-img
         :src="item.media_url"
         :alt="item.caption"
-      >
+        format="webp"
+      />
     </template>
   </masonry-wall>
 </template>

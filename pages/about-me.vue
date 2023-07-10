@@ -11,10 +11,11 @@
             </p>
           </div>
           <div class="col-lg-4 offset-lg-1">
-            <img
+            <nuxt-img
               src="/images/about.jpg"
               class="img-fluid p-3 rounded-circle"
-            >
+              width="380"
+            />
           </div>
           <div class="col-12">
             <h2 class="mt-50 mb-0">

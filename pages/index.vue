@@ -3,11 +3,13 @@
     <div class="container intro">
       <div class="row">
         <div class="col-10 col-lg-3 col-md-5 text-center mx-auto">
-          <img
+          <nuxt-img
             src="/images/Headshot.png"
-            alt="Placeholder Headshot"
+            alt="Headshot of Lane"
             class="img-fluid rounded-circle mb-5 mb-lg-3 px-4"
-          >
+            width="380"
+            format="webp"
+          />
         </div>
         <div class="col-12 col-md-6 col-lg-9 d-flex flex-column justify-content-center">
           <h2>Hey! I'm Lane.</h2>

@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
     extends: ['nuxt-seo-kit'],
     modules: [
+        '@nuxt/image',
         '@nuxt/content',
         '@nuxtjs/eslint-module'
     ],
@@ -13,6 +14,9 @@ export default defineNuxtConfig({
             siteDescription: 'Just my little home on the internet.',
             language: 'en', // prefer more explicit language codes like `en-AU` over `en`
         }
+    },
+    image: {
+        format: ['webp']
     },
     css: [
         // Load a Node.js module directly (here it's a Sass file).
