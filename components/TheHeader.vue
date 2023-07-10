@@ -8,7 +8,12 @@
         class="logo"
         to="/"
       >
-        <nuxt-img src="/images/logo.svg" />
+        <nuxt-img
+          src="/images/logo.svg"
+          alt="Logo"
+          width="46"
+          height="46"
+        />
         <span>lane parton</span>
       </NuxtLink>
       <ul class="buy-button list-inline mb-0">

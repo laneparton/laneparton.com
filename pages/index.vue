@@ -28,6 +28,7 @@
               href="https://github.com/laneparton/"
               class="mx-2"
               target="_blank"
+              aria-label="GitHub"
             >
               <font-awesome-icon icon="fa-brands fa-github" />
             </a>
@@ -35,6 +36,7 @@
               href="https://www.linkedin.com/in/lane-parton/"
               class="mx-2"
               target="_blank"
+              aria-label="LinkedIn"
             >
               <font-awesome-icon icon="fa-brands fa-linkedin" />
             </a>
@@ -42,6 +44,7 @@
               href="https://twitter.com/laneparton"
               class="mx-2"
               target="_blank"
+              aria-label="Twitter"
             >
               <font-awesome-icon :icon="['fab', 'twitter']" />
             </a>
@@ -92,7 +95,7 @@
             to="/posts"
             class="text-primary"
           >
-            See More <font-awesome-icon icon="fa-solid fa-arrow-right" />
+            See More Posts <font-awesome-icon icon="fa-solid fa-arrow-right" />
           </NuxtLink>
         </div>
       </div>
