@@ -66,28 +66,29 @@ function getCurrentYear() {
 </script>
 
 <style lang="scss" scoped>
-@import 'bootstrap/scss/bootstrap-grid';
 .site-footer {
     box-shadow: inset 0 0 3px rgba(173, 181, 189, 0.15);
     padding: 1.5rem;
     background-color: #212f40;
     color: white;
-    @include media-breakpoint-down(md) {
+    @media (min-width: 992px) {
         text-align: center;
     }
 
     .site-info {
         text-align: center;
 
-        @include media-breakpoint-up(md) {
+        @media (min-width: 992px) {
             display: flex;
             align-items: center;
             text-align: unset;
         }
+
     }
     
     .footer-socials {
-        @include media-breakpoint-up(md) {
+      text-align: center;
+        @media (min-width: 992px) {
             text-align: right;
         }
     }
