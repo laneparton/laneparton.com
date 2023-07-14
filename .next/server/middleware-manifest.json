@@ -1,0 +1,50 @@
+{
+  "sortedMiddleware": [],
+  "middleware": {},
+  "functions": {
+    "/api/social-image": {
+      "env": [
+        "VERCEL_URL",
+        "NEXT_PUBLIC_FATHOM_ID",
+        "NEXT_PUBLIC_SITE_CONFIG",
+        "JEST_WORKER_ID"
+      ],
+      "files": [
+        "server/edge-runtime-webpack.js",
+        "server/pages/api/social-image.js"
+      ],
+      "name": "pages/api/social-image",
+      "page": "/api/social-image",
+      "matchers": [
+        {
+          "regexp": "^/api/social\\-image$"
+        }
+      ],
+      "wasm": [
+        {
+          "name": "wasm_53adb396180a95eb122a0218c93e3d6474b1a27e",
+          "filePath": "server/edge-chunks/wasm_53adb396180a95eb122a0218c93e3d6474b1a27e.wasm"
+        },
+        {
+          "name": "wasm_5b50c798761dc0131e9ebe945031077e8a02633b",
+          "filePath": "server/edge-chunks/wasm_5b50c798761dc0131e9ebe945031077e8a02633b.wasm"
+        }
+      ],
+      "assets": [
+        {
+          "name": "Inter-Regular.8c0fe73bdbebb91d.ttf",
+          "filePath": "server/edge-chunks/asset_Inter-Regular.8c0fe73bdbebb91d.ttf"
+        },
+        {
+          "name": "Inter-SemiBold.48eaf57b160b007a.ttf",
+          "filePath": "server/edge-chunks/asset_Inter-SemiBold.48eaf57b160b007a.ttf"
+        },
+        {
+          "name": "noto-sans-v27-latin-regular.5dda3fca77107598.ttf",
+          "filePath": "server/edge-chunks/asset_noto-sans-v27-latin-regular.5dda3fca77107598.ttf"
+        }
+      ]
+    }
+  },
+  "version": 2
+}

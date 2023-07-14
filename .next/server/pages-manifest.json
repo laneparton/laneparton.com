@@ -1,0 +1,14 @@
+{
+  "/api/social-image": "pages/api/social-image.js",
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/404": "pages/404.html",
+  "/api/notion-page-info": "pages/api/notion-page-info.js",
+  "/api/search-notion": "pages/api/search-notion.js",
+  "/feed": "pages/feed.js",
+  "/sitemap.xml": "pages/sitemap.xml.js",
+  "/": "pages/index.js",
+  "/[pageId]": "pages/[pageId].js",
+  "/robots.txt": "pages/robots.txt.js"
+}
