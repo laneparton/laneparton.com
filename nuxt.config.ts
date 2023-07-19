@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     modules: [
         '@nuxt/image',
         '@nuxt/content',
-        '@nuxtjs/eslint-module'
+        '@nuxtjs/eslint-module',
+        '@nuxtjs/tailwindcss'
     ],
     runtimeConfig: {
         instagramToken: process.env.INSTAGRAM_TOKEN,
@@ -24,8 +25,6 @@ export default defineNuxtConfig({
     css: [
         // Load a Node.js module directly (here it's a Sass file).
         '@fortawesome/fontawesome-svg-core/styles.css',
-        // CSS file in the project
-        '@/assets/styles/main.scss',
     ],
     build: {
         transpile: [

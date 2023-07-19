@@ -1,11 +1,11 @@
 <template>
   <header
     id="topnav"
-    :class="{ 'nav-sticky': isSticky }"
+    :class="{ 'sticky top-0 z-50 bg-midnightBlue': isSticky }"
   >
-    <div class="container">
+    <div class="container flex py-4">
       <NuxtLink
-        class="logo"
+        class="flex items-center font-normal text-gray-900"
         to="/"
       >
         <nuxt-img
@@ -14,114 +14,107 @@
           width="46"
           height="46"
         />
-        <span>lane parton</span>
+        <span class="ml-4 text-white text-2xl tracking-wider">lane parton</span>
       </NuxtLink>
-      <ul class="buy-button list-inline mb-0">
-        <li class="list-inline-item mb-0">
-          <button
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
-            aria-label="Open"
-            @click="toggleNav"
-            class="btn btn-icon btn-pills btn-primary"
-          >
-            <font-awesome-icon :icon="['fas', 'fa-bars']" />
-          </button>
-        </li>
-      </ul>
-
-      <div
-        id="offcanvasRight"
-        class="offcanvas offcanvas-end shadow border-0"
-        tabindex="-1"
-        aria-labelledby="offcanvasRightLabel"
-        :class="{ show: isNavOpen }"
+      <button
+        type="button"
+        data-drawer-target="drawer-right-example"
+        data-drawer-show="drawer-right-example"
+        data-drawer-placement="right"
+        aria-controls="drawer-right-example"
+        class="ml-auto bg-yellow-300 aspect-square"
       >
-        <div class="offcanvas-header px-4 border-bottom">
-          <button
-            type="button"
-            class="btn-close d-flex align-items-center text-dark"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-            @click="toggleNav"
-          >
-            <font-awesome-icon icon="fa-solid fa-xmark" />
-          </button>
-        </div>
+        <font-awesome-icon :icon="['fas', 'fa-bars']" />
+      </button>
 
-        <div class="offcanvas-body d-flex align-items-center align-items-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div
-                  id="navigation"
-                  class="toggle-menu"
-                >
-                  <!-- Navigation Menu-->
-                  <ul class="navigation-menu toggle-menu-item">
-                    <li class="has-submenu">
-                      <NuxtLink
-                        to="/"
-                        @click="toggleNav"
-                      >
-                        Home
-                      </NuxtLink>
-                    </li>
-                    <li class="has-submenu">
-                      <NuxtLink
-                        to="/about-me"
-                        @click="toggleNav"
-                      >
-                        About Me
-                      </NuxtLink>
-                    </li>
-                    <li class="has-submenu">
-                      <NuxtLink
-                        to="/consulting"
-                        @click="toggleNav"
-                      >
-                        Consulting
-                      </NuxtLink>
-                    </li>
-                    <li class="has-submenu">
-                      <NuxtLink
-                        to="/posts"
-                        @click="toggleNav"
-                      >
-                        Posts
-                      </NuxtLink>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div
-        class="offcanvas-backdrop fade"
-        :class="{ show: isNavOpen }"
-        @click="toggleNav"
-      />
+        id="drawer-right-example"
+        class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800"
+        tabindex="-1"
+        aria-labelledby="drawer-right-label"
+      >
+        <h5
+          id="drawer-right-label"
+          class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"
+        >
+          <svg
+            class="w-4 h-4 mr-2.5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+          </svg>Right drawer
+        </h5>
+        <button
+          type="button"
+          data-drawer-hide="drawer-right-example"
+          aria-controls="drawer-right-example"
+          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
+        >
+          <svg
+            class="w-3 h-3"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+            />
+          </svg>
+          <span class="sr-only">Close menu</span>
+        </button>
+        <ul class="navigation-menu toggle-menu-item">
+          <li class="has-submenu">
+            <NuxtLink
+              to="/"
+            >
+              Home
+            </NuxtLink>
+          </li>
+          <li class="has-submenu">
+            <NuxtLink
+              to="/about-me"
+            >
+              About Me
+            </NuxtLink>
+          </li>
+          <li class="has-submenu">
+            <NuxtLink
+              to="/consulting"
+            >
+              Consulting
+            </NuxtLink>
+          </li>
+          <li class="has-submenu">
+            <NuxtLink
+              to="/posts"
+            >
+              Posts
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
 </template>
 
 <script setup>
+import { initFlowbite } from 'flowbite'
 import { ref, onMounted, onUnmounted } from "vue"
 const isSticky = ref(false)
-const isNavOpen = ref(false)
 
 function handleScroll() {
     const navbar = document.getElementById("topnav")
     if (navbar) {
         isSticky.value = window.pageYOffset >= 50
     }
-}
-
-function toggleNav() {
-    isNavOpen.value = !isNavOpen.value
 }
 
 onMounted(() => {
@@ -132,29 +125,15 @@ onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
 })
 
+// initialize components based on data attribute selectors
+onMounted(() => {
+    initFlowbite();
+})
+
 </script>
 
-<style lang="scss">
-.logo {
-    font-weight: normal;
-
-    img {
-        margin-right: 16px;
-    }
-}
-.offcanvas-backdrop.fade {
-    display: none;
-}
-
-.offcanvas-backdrop.show {
-    display: block;
-}
-
-.offcanvas-header {
-    justify-content: flex-end;
-
-    .btn-close {
-        font-size: 1.5rem;
-    }
+<style>
+.sticky {
+  box-shadow: 0 0 3px rgba(173,181,189,.15);
 }
 </style>
