@@ -89,7 +89,7 @@
               </h2>
               <a
                 href="mailto:hello@laneparton.com"
-                class="bg-lightOrange text-white font-bold py-2 px-4 rounded"
+                class="bg-lightOrange text-white font-bold py-2 px-4 rounded hover:text-white"
               >Let's Chat</a>
             </div>
           </div>

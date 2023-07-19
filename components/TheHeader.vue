@@ -1,7 +1,8 @@
 <template>
   <header
     id="topnav"
-    :class="{ 'sticky top-0 z-50 bg-midnightBlue': isSticky }"
+    :class="{ 'sticky-shadow': isSticky }"
+    class="w-full fixed top-0 bg-midnightBlue"
   >
     <div class="container flex py-4">
       <NuxtLink
@@ -18,97 +19,83 @@
       </NuxtLink>
       <button
         type="button"
-        data-drawer-target="drawer-right-example"
-        data-drawer-show="drawer-right-example"
-        data-drawer-placement="right"
-        aria-controls="drawer-right-example"
-        class="ml-auto bg-yellow-300 aspect-square"
+        aria-controls="nav-drawer"
+        class="ml-auto nav-button"
+        @click="toggleNav"
       >
         <font-awesome-icon :icon="['fas', 'fa-bars']" />
       </button>
 
       <div
-        id="drawer-right-example"
-        class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-white w-80 dark:bg-gray-800"
+        id="nav-drawer"
+        class="fixed inset-y-0 right-0 z-50 w-full lg:w-96 bg-midnightBlue shadow-lg transform ease-in-out duration-300 translate-x-full"
         tabindex="-1"
-        aria-labelledby="drawer-right-label"
+        :class="{ show: isNavOpen }"
       >
-        <h5
-          id="drawer-right-label"
-          class="inline-flex items-center mb-4 text-base font-semibold text-gray-500 dark:text-gray-400"
-        >
-          <svg
-            class="w-4 h-4 mr-2.5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="currentColor"
-            viewBox="0 0 20 20"
+        <div class="px-4 border-b flex border-faintBlue">
+          <button
+            type="button"
+            class="ml-auto text-3xl py-4 text-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+            @click="toggleNav"
           >
-            <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
-          </svg>Right drawer
-        </h5>
-        <button
-          type="button"
-          data-drawer-hide="drawer-right-example"
-          aria-controls="drawer-right-example"
-          class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 absolute top-2.5 right-2.5 inline-flex items-center justify-center dark:hover:bg-gray-600 dark:hover:text-white"
-        >
-          <svg
-            class="w-3 h-3"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-            />
-          </svg>
-          <span class="sr-only">Close menu</span>
-        </button>
-        <ul class="navigation-menu toggle-menu-item">
-          <li class="has-submenu">
-            <NuxtLink
-              to="/"
+            <font-awesome-icon icon="fa-solid fa-xmark" />
+          </button>
+        </div>
+        <div class="h-full flex items-center justify-center">
+          <ul class="text-center">
+            <li
+              v-for="(link, index) of navLinks"
+              :key="index"
+              class="py-4 text-xl uppercase"
             >
-              Home
-            </NuxtLink>
-          </li>
-          <li class="has-submenu">
-            <NuxtLink
-              to="/about-me"
-            >
-              About Me
-            </NuxtLink>
-          </li>
-          <li class="has-submenu">
-            <NuxtLink
-              to="/consulting"
-            >
-              Consulting
-            </NuxtLink>
-          </li>
-          <li class="has-submenu">
-            <NuxtLink
-              to="/posts"
-            >
-              Posts
-            </NuxtLink>
-          </li>
-        </ul>
+              <NuxtLink
+                :to="link.to"
+                @click="toggleNav"
+              >
+                {{ link.text }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
+    <div
+      id="backdrop"
+      class="fixed inset-0 z-40 bg-black opacity-0 transition-opacity duration-300 pointer-events-none"
+      :class="{ show: isNavOpen }"
+      @click="toggleNav"
+    />
   </header>
 </template>
 
 <script setup>
-import { initFlowbite } from 'flowbite'
 import { ref, onMounted, onUnmounted } from "vue"
 const isSticky = ref(false)
+const isNavOpen = ref(false)
+const navLinks = [
+  {
+    text: "Home",
+    to: "/"
+  },
+  {
+    text: "About Me",
+    to: "/about-me"
+  },
+  {
+    text: "Consulting",
+    to: "/consulting"
+  },
+  {
+    text: "Posts",
+    to: "/posts"
+  }
+]
+
+function toggleNav() {
+    isNavOpen.value = !isNavOpen.value
+}
 
 function handleScroll() {
     const navbar = document.getElementById("topnav")
@@ -124,16 +111,27 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
 })
-
-// initialize components based on data attribute selectors
-onMounted(() => {
-    initFlowbite();
-})
-
 </script>
 
 <style>
-.sticky {
+.sticky-shadow {
   box-shadow: 0 0 3px rgba(173,181,189,.15);
 }
+
+#nav-drawer.show {
+  @apply translate-x-0 visible;
+}
+
+#backdrop.show {
+  @apply opacity-75;
+}
+
+.nav-button {
+  @apply text-white bg-lightOrange rounded-sm;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  line-height: 24px;
+}
+
 </style>

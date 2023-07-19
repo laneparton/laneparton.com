@@ -1,6 +1,6 @@
 <template>
   <main class="min-h-screen container">
-    <article class="mt-16 mx-auto prose prose-invert">
+    <article class="my-36 mx-auto prose prose-invert">
       <ContentDoc
         v-slot="{ doc }"
         class="prose prose-invert"

@@ -1,6 +1,5 @@
 export default {
     plugins: [
-        require('flowbite/plugin'),
         require('@tailwindcss/typography'),
     ],
     content: [
@@ -20,7 +19,8 @@ export default {
                 navyBlue: "#212f40",
                 slateBlue: "#2f435b",
                 lightBlue: "#9bacc4",
-                lightOrange: "#f7961c"
+                lightOrange: "#f7961c",
+                faintBlue: "#2a3c51"
             },
             container: {
                 center: true,

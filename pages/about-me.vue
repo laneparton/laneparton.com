@@ -1,6 +1,6 @@
 <template>
   <main class="min-h-screen">
-    <section class="lg:py-24">
+    <section class="mt-36 lg:pb-24">
       <div class="container mx-auto">
         <div class="flex flex-wrap gap-4 items-center">
           <div class="w-full lg:w-7/12">

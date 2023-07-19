@@ -1,6 +1,6 @@
 <template>
   <main class="min-h-screen">
-    <div class="container py-6 mt-24">
+    <div class="container py-6 mt-36">
       <div class="flex flex-wrap">
         <div class="w-full lg:w-1/4 md:w-1/2 text-center mx-auto">
           <nuxt-img
