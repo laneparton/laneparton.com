@@ -10,6 +10,12 @@ export default defineNuxtConfig({
         '@nuxtjs/eslint-module',
         '@nuxtjs/tailwindcss'
     ],
+    content: {
+        highlight: {
+          // Theme used in all color schemes.
+          theme: 'github-dark'
+        }
+    },
     runtimeConfig: {
         instagramToken: process.env.INSTAGRAM_TOKEN,
         public: {
