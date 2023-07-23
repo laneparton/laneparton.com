@@ -54,7 +54,7 @@
               Services
             </h2>
           </div>
-          <div class="w-full grid gap-4 grid-cols-3 mt-4">
+          <div class="w-full grid gap-4 grid-cols-1 lg:grid-cols-3 mt-4">
             <div
               v-for="(card, index) in cards"
               :key="index"

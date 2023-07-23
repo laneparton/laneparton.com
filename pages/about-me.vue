@@ -27,7 +27,7 @@
             </h2>
           </div>
         </div>
-        <div class="w-full grid gap-4 grid-cols-3">
+        <div class="w-full grid gap-4 grid-cols-1 lg:grid-cols-3">
           <div
             v-for="(card, index) in cliffNotes"
             :key="index"

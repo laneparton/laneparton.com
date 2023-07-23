@@ -2,7 +2,7 @@
   <header
     id="topnav"
     :class="{ 'sticky-shadow': isSticky }"
-    class="w-full fixed top-0 bg-midnightBlue"
+    class="w-full fixed z-10 top-0 px-4 bg-midnightBlue"
   >
     <div class="container flex py-4">
       <NuxtLink
@@ -28,14 +28,14 @@
 
       <div
         id="nav-drawer"
-        class="fixed inset-y-0 right-0 z-50 w-full lg:w-96 bg-midnightBlue shadow-lg transform ease-in-out duration-300 translate-x-full"
+        class="fixed inset-y-0 z-50 right-0 w-full lg:w-96 bg-midnightBlue shadow-lg transform ease-in-out duration-300 translate-x-full"
         tabindex="-1"
         :class="{ show: isNavOpen }"
       >
         <div class="px-4 border-b flex border-faintBlue">
           <button
             type="button"
-            class="ml-auto text-3xl py-4 text-white"
+            class="mr-4 ml-auto text-3xl py-4 text-white"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
             @click="toggleNav"
@@ -48,7 +48,7 @@
             <li
               v-for="(link, index) of navLinks"
               :key="index"
-              class="py-4 text-xl uppercase"
+              class="py-4 text-xl uppercase font-bold"
             >
               <NuxtLink
                 :to="link.to"
@@ -123,7 +123,7 @@ onUnmounted(() => {
 }
 
 #backdrop.show {
-  @apply opacity-75;
+  @apply opacity-75 pointer-events-auto;
 }
 
 .nav-button {

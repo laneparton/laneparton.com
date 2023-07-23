@@ -2,7 +2,9 @@
   <div>
     <SeoKit />
     <TheHeader />
-    <NuxtPage />
+    <div class="px-4">
+      <NuxtPage />
+    </div>
     <TheFooter />
   </div>
 </template>  

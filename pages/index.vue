@@ -56,13 +56,13 @@
     </div>
 
     <div class="container mt-24">
-      <div class="flex flex-row gap-4">
-        <div class="w-full md:w-1/2 mb-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="w-full mb-4">
           <CalloutCard>
             <template #content>
               <h5 class="relative mb-6 text-lg font-medium text-white">
                 Get to Know Me
-                <span class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-gray-400" />
+                <span class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-lightBlue" />
               </h5>
               <p class="mb-3">
                 Get a glimpse inside who I am and what I love. From my journey as a software engineer to my passions outside of work, like exploring the outdoors with my fianceé and dog, I'm excited to share my story with you.
@@ -76,12 +76,12 @@
             </template>
           </CalloutCard>
         </div>
-        <div class="w-full md:w-1/2 mb-4">
+        <div class="w-full mb-4">
           <CalloutCard>
             <template #content>
               <h5 class="relative mb-6 text-lg font-medium text-white">
                 Let's Collaborate
-                <span class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-gray-400" />
+                <span class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-lightBlue" />
               </h5>
               <p class="mb-3">
                 Whether you're a small business or an individual looking to build, maintain, or grow your web presence, I'm here to help. Get in touch to explore personalized web consulting services that fit your unique needs and goals.

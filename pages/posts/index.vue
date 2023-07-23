@@ -1,12 +1,12 @@
 <template>
-  <div class="min-h-screen container mx-auto mb-12">
+  <div class="min-h-screen container mx-auto mt-24 mb-12">
     <div class="flex flex-wrap">
       <div class="w-full my-12">
         <CalloutCard>
           <template #content>
             <h5 class="relative mb-6 text-lg font-medium text-white">
               &#127793; Heads up, this is a digital garden, not a blog
-              <span class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-gray-400" />
+              <span class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-lightBlue" />
             </h5>
             <p>
               Like many, <nuxt-link
