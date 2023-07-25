@@ -1,11 +1,12 @@
 <template>
   <header
     id="topnav"
-    :class="{ 'nav-sticky': isSticky }"
+    :class="{ 'sticky-shadow': isSticky }"
+    class="w-full fixed z-10 top-0 px-4 bg-midnightBlue"
   >
-    <div class="container">
+    <div class="container flex py-4">
       <NuxtLink
-        class="logo"
+        class="flex items-center font-normal text-gray-900"
         to="/"
       >
         <nuxt-img
@@ -14,34 +15,27 @@
           width="46"
           height="46"
         />
-        <span>lane parton</span>
+        <span class="ml-4 text-white text-2xl tracking-wider">lane parton</span>
       </NuxtLink>
-      <ul class="buy-button list-inline mb-0">
-        <li class="list-inline-item mb-0">
-          <button
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"
-            aria-label="Open"
-            @click="toggleNav"
-            class="btn btn-icon btn-pills btn-primary"
-          >
-            <font-awesome-icon :icon="['fas', 'fa-bars']" />
-          </button>
-        </li>
-      </ul>
+      <button
+        type="button"
+        aria-controls="nav-drawer"
+        class="ml-auto nav-button"
+        @click="toggleNav"
+      >
+        <font-awesome-icon :icon="['fas', 'fa-bars']" />
+      </button>
 
       <div
-        id="offcanvasRight"
-        class="offcanvas offcanvas-end shadow border-0"
+        id="nav-drawer"
+        class="fixed inset-y-0 z-50 right-0 w-full lg:w-96 bg-midnightBlue shadow-lg transform ease-in-out duration-300 translate-x-full"
         tabindex="-1"
-        aria-labelledby="offcanvasRightLabel"
         :class="{ show: isNavOpen }"
       >
-        <div class="offcanvas-header px-4 border-bottom">
+        <div class="px-4 border-b flex border-faintBlue">
           <button
             type="button"
-            class="btn-close d-flex align-items-center text-dark"
+            class="mr-4 ml-auto text-3xl py-4 text-white"
             data-bs-dismiss="offcanvas"
             aria-label="Close"
             @click="toggleNav"
@@ -49,62 +43,30 @@
             <font-awesome-icon icon="fa-solid fa-xmark" />
           </button>
         </div>
-
-        <div class="offcanvas-body d-flex align-items-center align-items-center">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div
-                  id="navigation"
-                  class="toggle-menu"
-                >
-                  <!-- Navigation Menu-->
-                  <ul class="navigation-menu toggle-menu-item">
-                    <li class="has-submenu">
-                      <NuxtLink
-                        to="/"
-                        @click="toggleNav"
-                      >
-                        Home
-                      </NuxtLink>
-                    </li>
-                    <li class="has-submenu">
-                      <NuxtLink
-                        to="/about-me"
-                        @click="toggleNav"
-                      >
-                        About Me
-                      </NuxtLink>
-                    </li>
-                    <li class="has-submenu">
-                      <NuxtLink
-                        to="/consulting"
-                        @click="toggleNav"
-                      >
-                        Consulting
-                      </NuxtLink>
-                    </li>
-                    <li class="has-submenu">
-                      <NuxtLink
-                        to="/posts"
-                        @click="toggleNav"
-                      >
-                        Posts
-                      </NuxtLink>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="h-full flex items-center justify-center">
+          <ul class="text-center">
+            <li
+              v-for="(link, index) of navLinks"
+              :key="index"
+              class="py-4 text-xl uppercase font-bold"
+            >
+              <NuxtLink
+                :to="link.to"
+                @click="toggleNav"
+              >
+                {{ link.text }}
+              </NuxtLink>
+            </li>
+          </ul>
         </div>
       </div>
-      <div
-        class="offcanvas-backdrop fade"
-        :class="{ show: isNavOpen }"
-        @click="toggleNav"
-      />
     </div>
+    <div
+      id="backdrop"
+      class="fixed inset-0 z-40 bg-black opacity-0 transition-opacity duration-300 pointer-events-none"
+      :class="{ show: isNavOpen }"
+      @click="toggleNav"
+    />
   </header>
 </template>
 
@@ -112,16 +74,34 @@
 import { ref, onMounted, onUnmounted } from "vue"
 const isSticky = ref(false)
 const isNavOpen = ref(false)
+const navLinks = [
+  {
+    text: "Home",
+    to: "/"
+  },
+  {
+    text: "About Me",
+    to: "/about-me"
+  },
+  {
+    text: "Consulting",
+    to: "/consulting"
+  },
+  {
+    text: "Posts",
+    to: "/posts"
+  }
+]
+
+function toggleNav() {
+    isNavOpen.value = !isNavOpen.value
+}
 
 function handleScroll() {
     const navbar = document.getElementById("topnav")
     if (navbar) {
         isSticky.value = window.pageYOffset >= 50
     }
-}
-
-function toggleNav() {
-    isNavOpen.value = !isNavOpen.value
 }
 
 onMounted(() => {
@@ -131,30 +111,27 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
 })
-
 </script>
 
-<style lang="scss">
-.logo {
-    font-weight: normal;
-
-    img {
-        margin-right: 16px;
-    }
-}
-.offcanvas-backdrop.fade {
-    display: none;
+<style>
+.sticky-shadow {
+  box-shadow: 0 0 3px rgba(173,181,189,.15);
 }
 
-.offcanvas-backdrop.show {
-    display: block;
+#nav-drawer.show {
+  @apply translate-x-0 visible;
 }
 
-.offcanvas-header {
-    justify-content: flex-end;
-
-    .btn-close {
-        font-size: 1.5rem;
-    }
+#backdrop.show {
+  @apply opacity-75 pointer-events-auto;
 }
+
+.nav-button {
+  @apply text-white bg-lightOrange rounded-sm;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  line-height: 24px;
+}
+
 </style>

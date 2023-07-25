@@ -1,11 +1,21 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+    app: {
+        pageTransition: { name: 'page', mode: 'out-in' }
+    },
     extends: ['nuxt-seo-kit'],
     modules: [
         '@nuxt/image',
         '@nuxt/content',
-        '@nuxtjs/eslint-module'
+        '@nuxtjs/eslint-module',
+        '@nuxtjs/tailwindcss'
     ],
+    content: {
+        highlight: {
+          // Theme used in all color schemes.
+          theme: 'github-dark'
+        }
+    },
     runtimeConfig: {
         instagramToken: process.env.INSTAGRAM_TOKEN,
         public: {
@@ -21,8 +31,6 @@ export default defineNuxtConfig({
     css: [
         // Load a Node.js module directly (here it's a Sass file).
         '@fortawesome/fontawesome-svg-core/styles.css',
-        // CSS file in the project
-        '@/assets/styles/main.scss',
     ],
     build: {
         transpile: [

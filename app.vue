@@ -1,8 +1,22 @@
 <template>
   <div>
     <SeoKit />
-    <NuxtLayout>
+    <TheHeader />
+    <div class="px-4">
       <NuxtPage />
-    </NuxtLayout>
+    </div>
+    <TheFooter />
   </div>
 </template>  
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.25s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  /* filter: blur(1rem); */
+}
+</style>

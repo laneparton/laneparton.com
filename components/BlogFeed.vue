@@ -1,41 +1,44 @@
 <template>
   <div>
-    <h2>Latest Posts</h2>
+    <h2 class="text-3xl text-white mb-4">
+      Latest Posts
+    </h2>
     <div
-      class="blog-post-list"
+      class="flex flex-col border-t border-lightBlue"
     >
-      <div class="blog-post-row blog-post-header">
-        <div class="blog-post-col blog-post-title">
-          <span class="icon"><font-awesome-icon icon="fas fa-font" /></span>Name
+      <div class="flex border-b border-lightBlue">
+        <div class="flex-1 py-2 px-3 text-left text-sm border-r border-lightBlue">
+          <span class="me-2"><font-awesome-icon icon="fas fa-font" /></span>Name
         </div>
-        <div class="blog-post-col blog-post-date">
-          <span class="icon"><font-awesome-icon icon="fa-regular fa-calendar" /></span>Date Published
+        <div class="flex-1 py-2 px-3 text-left text-sm border-r border-lightBlue">
+          <span class="me-2"><font-awesome-icon icon="fa-regular fa-calendar" /></span>Date Published
         </div>
-        <div class="blog-post-col blog-post-tags">
-          <span class="icon"><font-awesome-icon icon="fas fa-list" /></span>Tags
+        <div class="flex-1 py-2 px-3 text-left text-sm hidden lg:flex">
+          <span class="me-2"><font-awesome-icon icon="fas fa-list" /></span>Tags
         </div>
       </div>
       <div
         v-for="(post, k) in props.data"
         :key="k"
-        class="blog-post-row"
+        class="flex border-b border-lightBlue"
       >
-        <div class="blog-post-col blog-post-title">
+        <div class="flex-1 py-2 px-3 text-sm border-r border-lightBlue flex items-center">
           <NuxtLink
             v-if="post._path"
             :to="post._path"
+            class="font-bold"
           >
             {{ post.title }}
           </NuxtLink>
         </div>
-        <div class="blog-post-col blog-post-date">
+        <div class="flex-1 py-2 px-3 text-sm border-r border-lightBlue flex items-center">
           {{ dayjs(post.published).format("MMMM D, YYYY") }}
         </div>
-        <div class="blog-post-col blog-post-tags">
+        <div class="flex-1 py-2 px-3 text-sm hidden lg:flex flex-wrap gap-2 items-center">
           <span
             v-for="tag in post.tags"
             :key="tag"
-            class="badge"
+            class="py-1 px-2 border border-lightBlue text-white text-sm font-normal rounded"
           >{{
             tag
           }}</span>
@@ -53,65 +56,3 @@ const props = defineProps({
 })
 
 </script>
-
-<style lang="scss">
-.blog-post-list {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid #9bacc4;
-}
-
-.blog-post-row {
-  display: flex;
-  border-bottom: 1px solid #9bacc4;
-}
-
-.blog-post-col {
-  flex: 1;
-  padding: 0.75rem;
-  text-align: left;
-  font-size: 14px;
-}
-
-.blog-post-header .blog-post-col {
-  padding: 0.5rem;
-}
-
-.blog-post-title a {
-  font-weight: bold;
-  border-bottom: 1px solid rgba(55, 53, 47, 0.16);
-}
-
-.blog-post-title {
-  border-right: 1px solid #9bacc4;
-}
-
-.blog-post-date {
-  max-width: 40%;
-  @media (min-width: 992px) {
-    max-width: 25%;
-    border-right: 1px solid #9bacc4;
-  }
-}
-
-.blog-post-header .icon {
-  margin-right: 5px;
-}
-
-.blog-post-tags {
-  display: none;
-
-  @media (min-width: 992px) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-  .badge {
-    font-size: 14px;
-    border: 1px solid #9bacc4;
-    font-weight: normal;
-  }
-}
-</style>

@@ -1,49 +1,57 @@
 <template>
-  <main class="page">
-    <section class="intro">
-      <div class="container">
-        <div class="row gy-4 align-items-center">
-          <div class="col-lg-7">
-            <h1>Hi Again,</h1>
-            <h3>In case you missed it, I'm Lane Parton &#128522;</h3>
-            <p>
+  <main class="min-h-screen">
+    <section class="mt-36 lg:pb-24">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap gap-4 items-center">
+          <div class="w-full lg:w-7/12">
+            <h1 class="text-4xl mb-4">
+              Hi Again,
+            </h1>
+            <h3 class="text-3xl">
+              In case you missed it, I'm Lane &#128522;
+            </h3>
+            <p class="mt-4">
               I'm a software engineer living in Raleigh, NC. Professionally, I'm passionate about building intuitive and natural user experiences. Personally, I enjoy traveling, working out, and spending time with my fiancée and &#128054;
             </p>
           </div>
-          <div class="col-lg-4 offset-lg-1">
+          <div class="w-full lg:w-4/12 lg:ml-4">
             <nuxt-img
               src="/images/about.jpg"
-              class="img-fluid p-3 rounded-circle"
+              class="w-full h-auto p-3 rounded-full"
               width="380"
             />
           </div>
-          <div class="col-12">
-            <h2 class="mt-50 mb-0">
+          <div class="w-full">
+            <h2 class="text-2xl mt-12 mb-4">
               Cliff Notes
             </h2>
           </div>
+        </div>
+        <div class="w-full grid gap-4 grid-cols-1 lg:grid-cols-3">
           <div
             v-for="(card, index) in cliffNotes"
             :key="index"
-            class="col-md-4"
+            class="w-full mb-4"
           >
-            <div class="card custom-card shadow-sm">
-              <div class="card-body">
-                <img
-                  :src="`/images/icons/${card.icon}`"
-                  class="py-3"
-                >
-                <h5 class="custom-card-title">
-                  {{ card.heading }}
-                </h5>
-              </div>
-            </div>
+            <CalloutCard>
+              <template #content>
+                <div class="w-full flex flex-col items-center">
+                  <img
+                    :src="`/images/icons/${card.icon}`"
+                    class="py-3"
+                  >
+                  <h5 class="text-xl mt-2">
+                    {{ card.heading }}
+                  </h5>
+                </div>
+              </template>
+            </CalloutCard>
           </div>
         </div>
       </div>
-      <div class="mt-100">
-        <div class="container">
-          <h2 class="mb-4">
+      <div class="mt-24">
+        <div class="container mx-auto">
+          <h2 class="text-2xl mb-4">
             Recent Memories
           </h2>
           <InstagramBlock />
@@ -83,32 +91,7 @@ const cliffNotes = [
 </script>
 
 <style lang="scss" scoped>
-.intro {
-  position: relative;
-  @media (min-width: 992px) {
-    padding: 100px 0;
-  }
-}
-.custom-card {
-    background-color: #212f40;
-    border: 1px solid #2f435b;
-    border-radius: 5px;
-    height: 100%;
-    padding: 1rem;
-
-    .card-body {
-        text-align: center;
-    }
-}
-
-.custom-card-title {
-    font-size: 1.25rem;
-    font-weight: 500;
-    position: relative;
-    margin-bottom: 0;
-}
-
-.custom-btn {
+.btn-custom {
 
     &:hover {
         svg {

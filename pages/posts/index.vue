@@ -1,17 +1,26 @@
 <template>
-  <div class="page container mb-50">
-    <div class="row">
-      <div class="col-12 mb-50">
-        <div class="card custom-card shadow-sm">
-          <div class="card-body">
-            <h5 class="custom-card-title">
+  <div class="min-h-screen container mx-auto mt-24 mb-12">
+    <div class="flex flex-wrap">
+      <div class="w-full my-12">
+        <CalloutCard>
+          <template #content>
+            <h5 class="relative mb-6 text-lg font-medium text-white">
               &#127793; Heads up, this is a digital garden, not a blog
+              <span class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-lightBlue" />
             </h5>
-            <p class="custom-card-text">
-              Like many, <a href="https://joelhooks.com/digital-garden">Joel Hooks</a> introduced me to the idea of a digital garden. Here, I focus on process and ideas rather than fully-baked blog posts. Additionally, if you'd like to learn more about digital gardens, I suggest reading <a href="https://maggieappleton.com/garden-history"><i>A Brief History & Ethos of the Digital Garden</i> by Maggie Appleton</a>
+            <p>
+              Like many, <nuxt-link
+                href="https://joelhooks.com/digital-garden"
+              >
+                Joel Hooks
+              </nuxt-link> introduced me to the idea of a digital garden. Here, I focus on process and ideas rather than fully-baked blog posts. Additionally, if you'd like to learn more about digital gardens, I suggest reading <nuxt-link
+                href="https://maggieappleton.com/garden-history"
+              >
+                <i>A Brief History & Ethos of the Digital Garden</i> by Maggie Appleton
+              </nuxt-link>
             </p>
-          </div>
-        </div>
+          </template>
+        </CalloutCard>
       </div>
     </div>
     <BlogFeed
@@ -26,42 +35,3 @@ const { data } = await useAsyncData("posts", () =>
   queryContent("posts").sort({ published: -1 }).find()
 );
 </script>
-
-<style lang="scss" scoped>
-.custom-card {
-    background-color: #212f40;
-    border: 1px solid #2f435b;
-    border-radius: 5px;
-    height: 100%;
-    padding: 1rem;
-
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-
-        .custom-btn {
-            margin-top: auto;
-        }
-    }
-}
-
-.custom-card-title {
-    font-size: 1.25rem;
-    font-weight: 500;
-    position: relative;
-    margin-bottom: 1.5rem;
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -8px;
-        left: 0;
-        width: 50%;
-        height: 2px;
-        background-color: #9bacc4;
-    }
-
-}
-
-</style>

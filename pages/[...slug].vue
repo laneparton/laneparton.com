@@ -1,20 +1,23 @@
 <template>
-  <main class="page">
-    <article class="container">
-      <ContentDoc v-slot="{ doc }">
+  <main class="min-h-screen container">
+    <article class="my-36 mx-auto prose prose-invert">
+      <ContentDoc
+        v-slot="{ doc }"
+        class="prose prose-invert"
+      >
         <div v-if="doc.hero">
           <img
-            class="hero-image rounded-3"
+            class="w-full h-72 object-cover mb-12 rounded-lg"
             :src="doc.hero"
           >
         </div>
-        <h1 class="mb-0">
+        <h1 class="text-3xl mb-0">
           {{ doc.title }}
         </h1>
-        <div class="byline">
+        <div class="mt-4 text-lg">
           Published: <time :datetime="doc.published">{{ dayjs(doc.published).format("MMMM D, YYYY") }}</time>
         </div>
-        <div class="article-content">
+        <div class="mt-4 text-base">
           <ContentRenderer :value="doc" />
         </div>
       </ContentDoc>
@@ -27,18 +30,6 @@ import dayjs from "dayjs";
 </script>
 
 <style lang="scss" scoped>
-.hero-image {
-  max-height: 300px;
-  width: 100%;
-  object-fit: cover;
-  margin-bottom: 50px;
-}
-
-.byline {
-  margin-bottom: 50px;
-  font-size: 1.2rem;
-}
-
 .article-content > * {
   font-size: 1.1rem;
 }
@@ -47,12 +38,7 @@ import dayjs from "dayjs";
 <style lang="scss">
 .article-content pre,
 .article-content aside {
-  background-color: #212f40;
-  border: 1px solid #2f435b;
-  border-radius: 5px;
-  height: 100%;
-  padding: 1rem;
-  margin: 2rem 0;
+  @apply bg-blue-900 border-blue-800 border-2 h-full p-4 my-8 rounded-lg;
 }
 
 .article-content h2 {
