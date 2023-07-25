@@ -17,6 +17,9 @@ export default defineNuxtConfig({
           theme: 'github-dark'
         }
     },
+    site: {
+        url: 'https://laneparton.com',
+    },
     runtimeConfig: {
         instagramToken: process.env.INSTAGRAM_TOKEN,
         public: {
