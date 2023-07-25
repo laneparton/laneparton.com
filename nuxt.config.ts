@@ -8,7 +8,8 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxt/content',
         '@nuxtjs/eslint-module',
-        '@nuxtjs/tailwindcss'
+        '@nuxtjs/tailwindcss',
+        'nuxt-og-image'
     ],
     content: {
         highlight: {
