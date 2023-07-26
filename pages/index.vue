@@ -121,12 +121,6 @@
 const { data } = await useAsyncData("posts", () =>
   queryContent("posts").sort({ published: -1 }).limit(5).find()
 );
-
-const ogImageOptions = {
-  title: 'My little home on the internet',
-}
-// a. Use the Composition API
-defineOgImage(ogImageOptions)
 </script>
 
 <style lang="scss" scoped>

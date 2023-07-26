@@ -27,12 +27,6 @@
 
 <script lang="ts" setup>
 import dayjs from "dayjs";
-
-// const ogImageOptions = {
-//   title: 'My little home on the internet',
-// }
-// // a. Use the Composition API
-// defineOgImage(ogImageOptions)
 </script>
 
 <style lang="scss" scoped>

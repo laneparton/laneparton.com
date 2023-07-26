@@ -8,17 +8,13 @@ export default defineNuxtConfig({
         '@nuxt/image',
         '@nuxt/content',
         '@nuxtjs/eslint-module',
-        '@nuxtjs/tailwindcss',
-        'nuxt-og-image'
+        '@nuxtjs/tailwindcss'
     ],
     content: {
         highlight: {
-          // Theme used in all color schemes.
-          theme: 'github-dark'
-        }
-    },
-    site: {
-        url: 'https://laneparton.com',
+            // See the available themes on https://github.com/shikijs/shiki/blob/main/docs/themes.md#all-theme
+            theme: 'dracula',
+        },
     },
     runtimeConfig: {
         instagramToken: process.env.INSTAGRAM_TOKEN,
