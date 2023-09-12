@@ -1,0 +1,104 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CalloutCard from "../components/CalloutCard.astro";
+import InstagramBlock from "../components/InstagramBlock.astro";
+import { Image } from "astro:assets";
+import aboutImage from "../assets/images/about.jpg"
+import developerIcon from "../assets/images/icons/developer.png"
+import iuIcon from "../assets/images/icons/iu.png"
+import motocrossIcon from "../assets/images/icons/motocross.png"
+import learnerIcon from "../assets/images/icons/learner.png"
+import adventureIcon from "../assets/images/icons/adventure.png"
+import foodieIcon from "../assets/images/icons/foodie.png"
+
+const cliffNotes = [
+  {
+    icon: developerIcon,
+    heading: "Software Engineer @ Xylem",
+  },
+  {
+    icon: iuIcon,
+    heading: "Indiana University Alumni",
+  },
+  {
+    icon: motocrossIcon,
+    heading: "Motocross Lover",
+  },
+  {
+    icon: learnerIcon,
+    heading: "Continuous Learner",
+  },
+  {
+    icon: adventureIcon,
+    heading: "Adventure Seeker",
+  },
+  {
+    icon: foodieIcon,
+    heading: "Self-Proclaimed Foodie",
+  },
+];
+---
+
+<Layout title="About Me">
+    <section class="mt-36 lg:pb-24">
+      <div class="container mx-auto">
+        <div class="flex flex-wrap gap-4 items-center">
+          <div class="w-full lg:w-7/12">
+            <h1 class="text-4xl mb-4">Hi Again,</h1>
+            <h3 class="text-3xl">In case you missed it, I'm Lane &#128522;</h3>
+            <p class="mt-4">
+              I'm a software engineer living in Raleigh, NC. Professionally, I'm
+              passionate about building intuitive and natural user experiences.
+              Personally, I enjoy traveling, working out, and spending time with
+              my fiancée and &#128054;
+            </p>
+          </div>
+          <div class="w-3/4 mx-auto lg:w-4/12 lg:ml-4">
+            <Image
+              src={aboutImage}
+              alt="Lane"
+              class="w-full h-auto p-3 rounded-full"
+              width="380"
+            />
+          </div>
+          <div class="w-full">
+            <h2 class="text-2xl mt-12 mb-4">Cliff Notes</h2>
+          </div>
+        </div>
+        <div class="w-full grid gap-4 grid-cols-1 lg:grid-cols-3">
+          {
+            cliffNotes.map((card) => (
+              <CalloutCard>
+                <div class="w-full flex flex-col items-center">
+                  <Image src={card.icon} alt={card.heading} class="py-3" />
+                  <h5 class="text-xl mt-2">{card.heading}</h5>
+                </div>
+              </CalloutCard>
+            ))
+          }
+        </div>
+      </div>
+      <div class="mt-24">
+        <div class="container mx-auto">
+          <h2 class="text-2xl mb-4">Recent Memories</h2>
+          <InstagramBlock />
+        </div>
+      </div>
+    </section>
+</Layout>
+
+<style lang="scss">
+  .btn-custom {
+    &:hover {
+      svg {
+        margin-left: 8px;
+      }
+    }
+
+    svg {
+      color: #f7961c;
+      margin-left: 3px;
+      transition: 0.2s all ease-in-out;
+    }
+  }
+</style>

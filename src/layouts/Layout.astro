@@ -1,0 +1,59 @@
+--- 
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SEO } from "astro-seo";
+import '../assets/css/tailwind.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<SEO
+			title={title + " | LP"}
+			twitter={{
+				creator: "@laneparton"
+			}}
+			extend={{
+				// extending the default link tags
+				link: [{ rel: "icon", href: "/favicon.png" }],
+				// extending the default meta tags
+				meta: [
+					{ name: "twitter:title", content: title },
+				],
+			}}
+		/>
+	</head>
+	<body>
+		<Header />
+		<main class="min-h-screen px-4">
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style lang="scss" is:global>
+	.btn-custom {
+		&:hover {
+			svg {
+				margin-left: 8px;
+			}
+		}
+		svg {
+			color: #f7961c;
+			margin-left: 3px;
+			transition: 0.2s all ease-in-out;
+			height: 1em;
+      		vertical-align: -0.2em;
+		}
+	}
+</style>

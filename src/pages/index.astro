@@ -1,0 +1,130 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CalloutCard from "../components/CalloutCard.astro";
+import BlogFeed from "../components/BlogFeed.astro";
+import { Image } from "astro:assets";
+import headshot from "../assets/images/Headshot.png";
+import { Icon } from "astro-icon";
+---
+
+<Layout title="Home">
+  <div class="container py-6 mt-36">
+    <div class="flex flex-wrap">
+      <div class="w-3/4 lg:w-1/4 md:w-1/2 text-center mx-auto">
+        <Image
+          src={headshot}
+          alt="Headshot of Lane"
+          class="w-full h-auto rounded-full mb-5 lg:mb-3 md:pe-8"
+          width="380"
+        />
+      </div>
+      <div class="w-full md:w-1/2 lg:w-3/4 flex flex-col justify-center">
+        <h2 class="text-4xl text-white mb-4">Hey! I'm Lane.</h2>
+        <p class="mb-6">
+          As a <strong class="text-white">Software Engineer</strong> with proven
+          experience in design and user experiences, I'm dedicated to creating
+          intuitive and engaging interfaces that push the boundaries of what
+          technology can do.
+        </p>
+        <p class="mb-6">
+          At <a
+            href="https://www.xylem.com/"
+            target="_blank"
+            class="font-semibold"
+          >Xylem</a>, I collaborate with a talented team to develop innovative
+          solutions that bring smart metering data straight to our customers.
+        </p>
+        <div class="flex text-white text-4xl social-links">
+          <a
+            href="https://github.com/laneparton/"
+            class="mx-2"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <Icon name="fa-brands:github" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lane-parton/"
+            class="mx-2"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <Icon name="fa-brands:linkedin" />
+          </a>
+          <a
+            href="https://twitter.com/laneparton"
+            class="mx-2"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <Icon name="fa-brands:twitter" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="w-full mb-4">
+        <CalloutCard>
+          <h5 class="relative mb-6 text-lg font-medium text-white">
+            Get to Know Me
+            <span
+              class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-lightBlue"
+            >
+            </span>
+          </h5>
+          <p class="mb-5">
+            Get a glimpse inside who I am and what I love. From my journey as a
+            software engineer to my passions outside of work, like exploring the
+            outdoors with my fianceé and dog, I'm excited to share my story with
+            you.
+          </p>
+          <a href="/about-me" class="btn-custom mt-auto">
+            Learn More About Me <Icon name="fa-solid:arrow-right" />
+          </a>
+        </CalloutCard>
+      </div>
+      <div class="w-full mb-4">
+        <CalloutCard>
+          <h5 class="relative mb-6 text-lg font-medium text-white">
+            Let's Collaborate
+            <span
+              class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-lightBlue"
+            >
+            </span>
+          </h5>
+          <p class="mb-5">
+            Whether you're a small business or an individual looking to build,
+            maintain, or grow your web presence, I'm here to help. Get in touch
+            to explore personalized web consulting services that fit your unique
+            needs and goals.
+          </p>
+          <a href="/consulting" class="btn-custom mt-auto">
+            Explore Services <Icon name="fa-solid:arrow-right" />
+          </a>
+        </CalloutCard>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-12 lg:mt-24 lg:mb-12">
+    <BlogFeed limit={5} />
+    <div class="flex flex-wrap">
+      <div class="w-full mt-4">
+        <a href="/posts" class="text-primary btn-custom">
+          See More Posts <Icon name="fa-solid:arrow-right" />
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style lang="scss" scoped>
+	.social-links {
+		[astro-icon] {
+			width: 2rem;
+		}
+	}
+</style>
