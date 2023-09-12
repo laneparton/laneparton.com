@@ -28,7 +28,9 @@ const navLinks = [
     const navDrawer = document.getElementById("nav-drawer");
     if (navDrawer?.classList.contains("show")) {
       navDrawer?.classList.remove("show");
+      navDrawer?.classList.add("hidden");
     } else {
+      navDrawer?.classList.remove("hidden");
       navDrawer?.classList.add("show");
     }
 
@@ -36,8 +38,10 @@ const navLinks = [
     backdrop?.addEventListener("click", () => toggleNav());
     if (backdrop?.classList.contains("show")) {
       backdrop?.classList.remove("show");
+      navDrawer?.classList.add("hidden");
     } else {
       backdrop?.classList.add("show");
+      navDrawer?.classList.remove("hidden");
     }
   }
 
@@ -66,21 +70,20 @@ const navLinks = [
       <Image src={logo} alt="Logo" width="46" height="46" />
       <span class="ml-4 text-white text-2xl tracking-wider">lane parton</span>
     </a>
-    <button type="button" aria-controls="nav-drawer" class="ml-auto nav-button">
+    <button type="button" aria-controls="nav-drawer" class="ml-auto nav-button" aria-label="Open Navigation">
       <Icon name="fa-solid:bars" />
     </button>
 
     <div
       id="nav-drawer"
-      class="fixed inset-y-0 z-50 right-0 w-full lg:w-96 bg-midnightBlue shadow-lg transform ease-in-out duration-300 translate-x-full"
+      class="hidden fixed inset-y-0 z-50 right-0 w-full lg:w-96 bg-midnightBlue shadow-lg transform ease-in-out duration-300 translate-x-full"
       tabindex="-1"
     >
       <div class="px-4 border-b flex border-faintBlue">
         <button
           type="button"
           class="mr-4 ml-auto text-3xl py-4 text-white"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
+          aria-label="Close Navigation"
         >
           <Icon name="ic:round-close" id="close-nav" />
         </button>
@@ -100,7 +103,7 @@ const navLinks = [
   </div>
   <div
     id="backdrop"
-    class="fixed inset-0 z-40 bg-black opacity-0 transition-opacity duration-300 pointer-events-none"
+    class="hidden fixed inset-0 z-40 bg-black opacity-0 transition-opacity duration-300 pointer-events-none"
   >
   </div>
 </header>
