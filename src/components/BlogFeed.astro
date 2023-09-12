@@ -21,7 +21,7 @@ const postsToDisplay = allPosts.slice(0, limit)
       <div class="flex-1 py-2 px-3 text-left text-sm border-r border-lightBlue">
         <Icon name="fa-solid:font" class="me-2" />Name
       </div>
-      <div class="flex-1 py-2 px-3 text-left text-sm border-r border-lightBlue">
+      <div class="flex-1 py-2 px-3 text-left text-sm lg:border-r border-lightBlue">
         <Icon name="fa-regular:calendar" class="me-2" />Date Published
       </div>
       <div class="flex-1 py-2 px-3 text-left text-sm hidden lg:flex">
@@ -36,7 +36,7 @@ const postsToDisplay = allPosts.slice(0, limit)
               {post.frontmatter.title}
             </a>
           </div>
-          <div class="flex-1 py-2 px-3 text-sm border-r border-lightBlue flex items-center">
+          <div class="flex-1 py-2 px-3 text-sm lg:border-r border-lightBlue flex items-center">
             {dayjs(post.frontmatter.published).format("MMMM D, YYYY")}
           </div>
           <div class="flex-1 py-2 px-3 text-sm hidden lg:flex flex-wrap gap-2 items-center">

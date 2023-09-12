@@ -10,11 +10,11 @@ import { Icon } from "astro-icon";
 <Layout title="Home">
   <div class="container py-6 mt-36">
     <div class="flex flex-wrap">
-      <div class="w-full lg:w-1/4 md:w-1/2 text-center mx-auto">
+      <div class="w-3/4 lg:w-1/4 md:w-1/2 text-center mx-auto">
         <Image
           src={headshot}
           alt="Headshot of Lane"
-          class="w-full h-auto rounded-full mb-5 lg:mb-3 pe-8"
+          class="w-full h-auto rounded-full mb-5 lg:mb-3 md:pe-8"
           width="380"
         />
       </div>
@@ -75,13 +75,13 @@ import { Icon } from "astro-icon";
             >
             </span>
           </h5>
-          <p class="mb-3">
+          <p class="mb-5">
             Get a glimpse inside who I am and what I love. From my journey as a
             software engineer to my passions outside of work, like exploring the
             outdoors with my fianceé and dog, I'm excited to share my story with
             you.
           </p>
-          <a href="/about-me" class="btn-custom">
+          <a href="/about-me" class="btn-custom mt-auto">
             Learn More About Me <Icon name="fa-solid:arrow-right" />
           </a>
         </CalloutCard>
@@ -95,13 +95,13 @@ import { Icon } from "astro-icon";
             >
             </span>
           </h5>
-          <p class="mb-3">
+          <p class="mb-5">
             Whether you're a small business or an individual looking to build,
             maintain, or grow your web presence, I'm here to help. Get in touch
             to explore personalized web consulting services that fit your unique
             needs and goals.
           </p>
-          <a href="/consulting" class="btn-custom">
+          <a href="/consulting" class="btn-custom mt-auto">
             Explore Services <Icon name="fa-solid:arrow-right" />
           </a>
         </CalloutCard>
