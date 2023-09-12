@@ -1,0 +1,65 @@
+--- 
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SEO } from "astro-seo";
+import dayjs from 'dayjs';
+import '../assets/css/tailwind.css';
+import { Image } from 'astro:assets';
+
+const { frontmatter } = Astro.props;
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<SEO
+			title={frontmatter.title + " | LP"}
+			twitter={{
+				creator: "@laneparton"
+			}}
+			extend={{
+				// extending the default link tags
+				link: [{ rel: "icon", href: "/favicon.png" }],
+				// extending the default meta tags
+				meta: [
+					{ name: "twitter:title", content: frontmatter.title },
+				],
+			}}
+		/>
+	</head>
+	<body>
+		<Header />
+        <main class="min-h-screen container">
+            <article class="my-36 mx-auto prose prose-invert">
+				{frontmatter.hero && (
+					<Image
+						class="w-full h-72 object-cover mb-12 rounded-lg"
+						src={frontmatter.hero}
+						alt={frontmatter.title}
+						width={700}
+						height={300}
+					/>
+				)}
+				<h1 class="text-3xl mb-0">
+				  { frontmatter.title }
+				</h1>
+				<div class="mt-4 text-lg">
+				  Published: <time datetime={frontmatter.published}>{ dayjs(frontmatter.published).format("MMMM D, YYYY") }</time>
+				</div>
+				<div class="mt-4 text-base">
+					<slot />
+				</div>
+            </article>
+        </main>
+		<Footer />
+	</body>
+</html>

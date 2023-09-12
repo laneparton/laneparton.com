@@ -1,7 +1,0 @@
-<template>
-  <div class="bg-navyBlue border-slateBlue border rounded-md h-full p-6 shadow-sm">
-    <div class="flex flex-col items-start">
-      <slot name="content" />
-    </div>
-  </div>
-</template>

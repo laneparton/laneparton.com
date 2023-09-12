@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+// Fetch media IDs
+const mediaIdResponse = await fetch("https://graph.instagram.com/me/media?fields=id&access_token=" + import.meta.env.INSTAGRAM_TOKEN);
+const { data } = await mediaIdResponse.json(); 
+const mediaIds = data.map((media) => media.id);
+
+// Iterate through IDs and fetch media info
+const postArray = [];
+
+for (const id of mediaIds) {
+  const mediaIdInfo = await fetch(`https://graph.instagram.com/${id}?fields=id,media_type,media_url,username,timestamp,caption&access_token=` + import.meta.env.INSTAGRAM_TOKEN);
+  const data = await mediaIdInfo.json();
+
+  if (data?.media_type !== 'VIDEO') {
+    postArray.push(data);  
+  }
+}
+---
+
+<div class="columns-2 md:columns-2 lg:columns-3">
+  {postArray.map(post => (
+      <img
+        class="mb-4"
+        src={post.media_url}
+        alt="test"
+    />
+  ))}
+</div>
+
+<style>
+  .grid {
+    grid-template-rows: masonry;
+  }
+  </style>

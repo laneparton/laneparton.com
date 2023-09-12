@@ -1,0 +1,53 @@
+---
+import dayjs from "dayjs";
+import { Icon } from "astro-icon"
+const allPosts = await Astro.glob("../pages/posts/*.md");
+
+interface Props {
+	limit: number
+}
+
+const { limit } = Astro.props;
+
+allPosts.sort((a, b) => Date.parse(b.frontmatter.published) - Date.parse(a.frontmatter.published));
+
+const postsToDisplay = allPosts.slice(0, limit)
+---
+
+<div>
+  <h2 class="text-3xl text-white mb-4">Latest Posts</h2>
+  <div class="flex flex-col border-t border-lightBlue">
+    <div class="flex border-b border-lightBlue">
+      <div class="flex-1 py-2 px-3 text-left text-sm border-r border-lightBlue">
+        <Icon name="fa-solid:font" class="me-2" />Name
+      </div>
+      <div class="flex-1 py-2 px-3 text-left text-sm border-r border-lightBlue">
+        <Icon name="fa-regular:calendar" class="me-2" />Date Published
+      </div>
+      <div class="flex-1 py-2 px-3 text-left text-sm hidden lg:flex">
+        <Icon name="fa-solid:list" class="me-2" />Tags
+      </div>
+    </div>
+    {
+      postsToDisplay.map((post) => (
+        <div class="flex border-b border-lightBlue">
+          <div class="flex-1 py-2 px-3 text-sm border-r border-lightBlue flex items-center">
+            <a href={post.url} class="font-bold">
+              {post.frontmatter.title}
+            </a>
+          </div>
+          <div class="flex-1 py-2 px-3 text-sm border-r border-lightBlue flex items-center">
+            {dayjs(post.frontmatter.published).format("MMMM D, YYYY")}
+          </div>
+          <div class="flex-1 py-2 px-3 text-sm hidden lg:flex flex-wrap gap-2 items-center">
+            {post.frontmatter?.tags?.map((tag: String) => (
+              <span class="py-1 px-2 border border-lightBlue text-white text-sm font-normal rounded">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
