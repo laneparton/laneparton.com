@@ -5,14 +5,8 @@ import { SEO } from "astro-seo";
 import dayjs from 'dayjs';
 import '../assets/css/tailwind.css';
 import { Image } from 'astro:assets';
-import { GenerateMeta } from '../components/GenerateMeta'
+
 const { frontmatter } = Astro.props;
-
-const filePath = Astro.props.file
-
-if(!frontmatter.description) {
-	await GenerateMeta(filePath)
-}
 ---
 
 <!DOCTYPE html>
@@ -62,4 +56,4 @@ if(!frontmatter.description) {
         </main>
 		<Footer />
 	</body>
-</html>
+</html>../integrations/GenerateMeta

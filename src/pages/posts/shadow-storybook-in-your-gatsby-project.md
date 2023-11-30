@@ -5,13 +5,10 @@ tags:
   - Development
   - Gatsby
   - JavaScript
-layout: >-
-  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 description: >-
-  Build isolated UI components and pages with Storybook, an open source tool.
-  Learn how to create a shadowed Storybook project using Gatsby theme shadowing.
-  Discover tips and tricks for configuring Webpack and resolving package errors.
-  Enjoy the benefits of organized and scalable development.
+  Build UI components and pages in isolation with Storybook, an open source
+  tool. Simplify UI development, testing, and documentation. Learn how to create
+  a shadowed Storybook project using Gatsby theme shadowing.
 ---
 
 In some projects, like our flagship project at Duke, your Gatsby project might become overwhelming large. What happens when you want to add another tool to it? Should you increase the complexity and organization of your project? What if you could split it out into its own repo? Should you?

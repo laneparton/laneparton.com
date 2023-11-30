@@ -4,13 +4,11 @@ published: 2020-02-28T00:00:00.000Z
 tags:
   - Conference
   - JavaScript
-layout: >-
-  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 description: >-
-  Discover the highlights of my experience at DeveloperWeek and the exciting
-  Hackathon in the Bay Area. From insightful sessions to exploring the tech
-  culture of San Francisco, I had an incredible time. Join me as I share my
-  journey!
+  Experienced developer shares insights from DeveloperWeek conference and
+  highlights favorite sessions, the Hackathon experience, and the vibrant tech
+  culture in San Francisco. Discover the power of engaging with specific
+  communities in the industry. Get inspired to attend your next conference.
 ---
 
 ### The Conference

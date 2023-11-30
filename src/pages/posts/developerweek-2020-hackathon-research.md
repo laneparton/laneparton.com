@@ -4,12 +4,10 @@ published: 2020-02-15T00:00:00.000Z
 tags:
   - Conference
   - JavaScript
-layout: >-
-  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 description: >-
-  Meta Description: A notepad of ideas and collaboration for different
-  challenges at the hackathon, including camera API, authentication, routing,
-  and reducing food waste.
+  Quick Note: A notepad for hackathon ideas. Topics include Canon Camera Control
+  API Challenge, Yubico Authentication, HERE Technologies Routing Challenge,
+  TomTom Points of Interest Challenge, and Amadeus Stress-Free Travel Challenge.
 ---
 
 Quick Note: This post quickly turned into a notepad for ideas and collaboration with my team members :)

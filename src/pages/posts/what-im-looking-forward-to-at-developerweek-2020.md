@@ -4,13 +4,14 @@ published: 2020-02-01T00:00:00.000Z
 tags:
   - Conference
   - JavaScript
-layout: >-
-  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 description: >-
-  Join me as I embark on my first developer conference outside of North
-  Carolina. Follow my journey at DeveloperWeek 2020 and discover the abundance
-  of learning opportunities and my top 5 talks. Plus, get a sneak peek at the
-  hackathon!
+  Exciting career development trip to Oakland for DeveloperWeek 2020. First
+  developer conference outside of North Carolina, and first ever hackathon.
+  Ready to bring frontend/design knowledge to my team. An abundance of learning
+  opportunities in JavaScript track as well as UI/UX discussions, team
+  management, and collaboration sessions. Top 5 talks include porting code to
+  Typescript, engineering blueprints, React development, and Progressive Web
+  Apps. Nervous but prepared for the hackathon.
 ---
 
 When team’s annual budget was approved I was greeted with a career development trip to Oakland for DeveloperWeek 2020. As exciting as it is, it’s also a bit unnerving. This will be my first developer conference outside of North Carolina and my **first ever hackathon**. That said, I believe I’ll bring some frontend/design knowledge to my hackathon team, whoever they may be :)

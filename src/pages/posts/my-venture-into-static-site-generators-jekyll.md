@@ -5,13 +5,11 @@ tags:
   - Development
   - Jekyll
   - SSG
-layout: >-
-  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 description: >-
-  Discover the convenience and efficiency of using Jekyll and Gatsby to build
-  static websites. Learn how Jekyll's simplicity and clear syntax can turn you
-  from a beginner to a pro in no time, and stay tuned for an exciting future
-  post exploring Gatsby. #webdevelopment #staticsites
+  Discover the benefits of using Jekyll and Gatsby for building static websites.
+  From zero to hero, Jekyll provides convenience and efficiency, while Gatsby
+  takes it to the next level. Stay tuned for more on my venture into Gatsby and
+  share your experience with Jekyll.
 ---
 
 Back in February, my team was tasked with updating the content on the Sensus Reach site, a site that promotes and supports our annual utility conference. While gathering requirements from internal stakeholders, it became apparent that more time would be spent working in the nuances of *The Keynote*, a WordPress theme, than it would take to build an entirely new site from the ground up.

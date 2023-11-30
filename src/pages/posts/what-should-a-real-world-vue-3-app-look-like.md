@@ -1,10 +1,11 @@
 ---
 title: What should a real-world Vue 3 app look like?
 description: >-
-  Discover key organizational patterns and best practices for building a
-  next-gen Vue 3 application, including splitting the entrypoint into separate
-  files, following casing standards, predictable type organization, using Pinia
-  for state management, and leveraging the power of composables.
+  Building and maintaining a Vue 2 app? Discover organizational best practices
+  for a next-gen Vue 3 application: separate entrypoint files, casing standards,
+  predictable type organization, next-gen state management (Pinia), and heavy
+  use of composables. Explore examples from real-world projects. There's more to
+  learn in the Vue ecosystem!
 published: 2023-01-05T00:00:00.000Z
 hero: 'https://frontendmasters.com/static-assets/learn/og-learning-path-vue.jpg'
 tags:
@@ -12,8 +13,6 @@ tags:
   - JavaScript
   - Learning
   - Vue.js
-layout: >-
-  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 ---
 
 ## Introduction

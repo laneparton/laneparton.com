@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import { remarkFrontmatter } from "./src/plugins/remark-frontmatter.mjs";
+import { generateMeta } from './src/integrations/GenerateMeta';
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
     tailwind({
       applyBaseStyles: false,
     }),
+    generateMeta({ openAiApiKey: import.meta.env.VITE_OPENAI_API_KEY })
   ],
   vite: {
     ssr: {

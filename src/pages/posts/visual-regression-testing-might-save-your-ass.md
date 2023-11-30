@@ -4,11 +4,11 @@ published: 2021-01-21T00:00:00.000Z
 tags:
   - Testing
   - Visual Regression Testing
-layout: >-
-  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 description: >-
-  "Discover BackstopJS, a powerful developer tool to eliminate second-guessing.
-  Learn how to install, test, and create a JS-based config file."
+  A powerful tool for developers to avoid second-guessing their changes. Learn
+  how simple it is to use BackstopJS in four steps. Install globally, run
+  backstop init, test, and approve. Abstract scenarios into a scenarios.js file
+  for easier configuration. Have questions? Contact me on Twitter - @LaneParton.
 ---
 
 I recently came across a very powerful tool that allows us developers to leave behind the second-guessing nature of “I changed x, did it break in y?”

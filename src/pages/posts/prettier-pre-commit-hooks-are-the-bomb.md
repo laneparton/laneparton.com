@@ -4,11 +4,10 @@ published: 2022-07-19T00:00:00.000Z
 tags:
   - Development
   - Git
-layout: >-
-  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 description: >-
-  "Learn how to use Git Hooks to automatically clean up your code on every
-  commit. Say goodbye to formatting inconsistencies with team members!"
+  Improve code consistency with Git Hooks. Learn how to automatically format
+  your code using pre-commit hooks and ensure a smooth collaboration with your
+  team.
 ---
 
 <aside>

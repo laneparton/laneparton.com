@@ -1,15 +1,14 @@
 ---
 title: Bun's Release Hype - A Step Towards Getting Acquired
 description: >-
-  A deep dive into the recent release of Bun 1.0 and its move towards Node.js.
-  Explore the hype, concerns, and the driving force behind Bun's ROI.
+  Discover the driving force behind Bun's ROI and their plan to revolutionize
+  edge computing with their own platform, Oven.sh. Will they build it entirely
+  or aim for acquisition? Only time will tell.
 published: 2023-09-13T00:00:00.000Z
 tags:
   - Hype
   - Opinion
   - JavaScript
-layout: >-
-  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 ---
 Last Friday, [Bun 1.0 was released](https://twitter.com/bunjavascript/status/1700148056706949627?ref_src=twsrc%5Etfw) - moving the conversation from [DHH and TypeScript](https://world.hey.com/dhh/turbo-8-is-dropping-typescript-70165c01) towards Node.js and a new competitor. Just like the battle that waged before it - this one was fueled by hype and passion. As the hype train rolled through Twitter, many were excited about a shiny new runtime, while others voiced concerns.
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I *really* like what <a href="https://twitter.com/jarredsumner?ref_src=twsrc%5Etfw">@jarredsumner</a> is doing with Bun, but I&#39;m a bit frustrated by their compatibility claim with <a href="https://twitter.com/nodejs?ref_src=twsrc%5Etfw">@nodejs</a>. It&#39;s not fully compatible, and many inner details are different. This results in many random issues over my repos asking for fixes for Bun incompatibilities,… <a href="https://t.co/p8t72natBF">pic.twitter.com/p8t72natBF</a></p>&mdash; Matteo Collina (@matteocollina) <a href="https://twitter.com/matteocollina/status/1700489064867123674?ref_src=twsrc%5Etfw">September 9, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
