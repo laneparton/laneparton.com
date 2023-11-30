@@ -175,13 +175,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"posts": {
-".unpublished/chat-gpt-plus-astro-intregation.md": {
-	id: ".unpublished/chat-gpt-plus-astro-intregation.md";
-  slug: "unpublished/chat-gpt-plus-astro-intregation";
-  body: string;
-  collection: "posts";
-  data: InferEntrySchema<"posts">
-} & { render(): Render[".md"] };
 "bun-release-a-step-towards-acquired.md": {
 	id: "bun-release-a-step-towards-acquired.md";
   slug: "bun-release-a-step-towards-acquired";
