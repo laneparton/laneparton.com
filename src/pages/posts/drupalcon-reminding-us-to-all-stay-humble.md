@@ -1,9 +1,15 @@
 ---
 title: DrupalCon - Reminding us to all stay humble
-published: 2022-05-04
+published: 2022-05-04T00:00:00.000Z
 tags:
-    - Conference
-    - Drupal
+  - Conference
+  - Drupal
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  DrupalCon 2022: A diverse and humbling experience. Learnings on DEI in tech,
+  homelessness in Portland, and the power of the open-source community. Watch
+  the keynotes and join the conversation. #DrupalCon2022 #DEI #OpenSource
 ---
 
 <aside>

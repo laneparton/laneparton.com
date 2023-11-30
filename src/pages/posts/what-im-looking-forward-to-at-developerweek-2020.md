@@ -1,9 +1,16 @@
 ---
 title: What I'm Looking Forward to at DeveloperWeek 2020
-published: 2020-02-01
+published: 2020-02-01T00:00:00.000Z
 tags:
-    - Conference
-    - JavaScript
+  - Conference
+  - JavaScript
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  Join me as I embark on my first developer conference outside of North
+  Carolina. Follow my journey at DeveloperWeek 2020 and discover the abundance
+  of learning opportunities and my top 5 talks. Plus, get a sneak peek at the
+  hackathon!
 ---
 
 When team’s annual budget was approved I was greeted with a career development trip to Oakland for DeveloperWeek 2020. As exciting as it is, it’s also a bit unnerving. This will be my first developer conference outside of North Carolina and my **first ever hackathon**. That said, I believe I’ll bring some frontend/design knowledge to my hackathon team, whoever they may be :)

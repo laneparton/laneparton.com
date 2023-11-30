@@ -1,9 +1,14 @@
 ---
 title: Gatsby + Netlify Redirects = Easy
-published: 2020-05-29
+published: 2020-05-29T00:00:00.000Z
 tags:
-    - Development
-    - Gatsby
+  - Development
+  - Gatsby
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  Essential guide to using Gatsby and Netlify for URL redirects, including the
+  use of gatsby-plugin-netlify and /static/_redirects. Find out more here!
 ---
 
 Redirects are essential to web development, especially when renaming pages… Next time you find yourself updating a URL on a Gatsby site, Netlify has your back. [gatsby-plugin-netlify](https://www.gatsbyjs.org/packages/gatsby-plugin-netlify/) to be specific. *createRedirect* seems like a nifty tool to use in your *gatsby-node.js* file, but in the time crunch I found myself in; it didn’t work.

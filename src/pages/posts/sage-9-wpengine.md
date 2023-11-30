@@ -1,10 +1,16 @@
 ---
 title: Sage 9 + WPEngine
-published: 2020-07-21
+published: 2020-07-21T00:00:00.000Z
 tags:
-    - Development
-    - PHP
-    - WordPress
+  - Development
+  - PHP
+  - WordPress
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  Learn how to deploy Sage 9 to WPEngine easily with a simple fix. Swap
+  'compiled' => wp_upload_dir()['basedir'].'/cache' to 'compiled' =>
+  '/tmp/sage-cache' in ./config/view.php.
 ---
 
 While working on a site recently, I dove headfirst into Sage 9. It was an amazing experience that I’ll document later. One trivial note I wanted to enforce in the land of Google and searching for common problems is the fix I found when deploying Sage 9 to WPEngine.

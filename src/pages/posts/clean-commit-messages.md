@@ -1,8 +1,14 @@
 ---
 title: The Sacred Art of Clean Commit Messages
-published: 2023-09-09
+published: 2023-09-09T00:00:00.000Z
 tags:
-    - JavaScript
+  - JavaScript
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  Craft meaningful commit messages to stand out as a developer. They provide
+  clarity, context, and demonstrate communication skills. Learn how to improve
+  your commit messages and why they matter.
 ---
 We've all been there. It's late at night, you're racing to finish a feature, and you scribble a quick "fix bug" or "oops" as a commit message. No big deal, right?
 

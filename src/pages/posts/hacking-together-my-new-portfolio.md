@@ -1,13 +1,17 @@
 ---
 title: Hacking Together My New Portfolio
-description: Learn how I hacked together my programming portfolio website on a budget using borrowed design templates, leftover code snippets, and open source tools.
-published: 2023-07-25
+description: >-
+  Build your portfolio with ease using cheap Envato designs. Discover the power
+  of templates and resources to create a stunning portfolio.
+published: 2023-07-25T00:00:00.000Z
 hero: /images/hacking-together-my-new-portfolio.jpg
 tags:
-    - Development
-    - Nuxt
-    - Vue
-    - Tailwind
+  - Development
+  - Nuxt
+  - Vue
+  - Tailwind
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 ---
 Developing a portfolio can be a daunting task. In the past I've had a hard time finding the right branding and design. I can never call it "done" and feel satisfied. I tweak a color here, change a font there, and next thing you know I'm experiencing decision fatigue. However, I recently found a way to hack the process and get myself over the hump. It all starts with cheap Envato designs.
 

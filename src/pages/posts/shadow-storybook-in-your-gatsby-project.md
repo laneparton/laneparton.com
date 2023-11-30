@@ -1,10 +1,17 @@
 ---
 title: Split Storybook from Your Gatsby Project with Shadowing
-published: 2022-01-28
+published: 2022-01-28T00:00:00.000Z
 tags:
   - Development
   - Gatsby
   - JavaScript
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  Build isolated UI components and pages with Storybook, an open source tool.
+  Learn how to create a shadowed Storybook project using Gatsby theme shadowing.
+  Discover tips and tricks for configuring Webpack and resolving package errors.
+  Enjoy the benefits of organized and scalable development.
 ---
 
 In some projects, like our flagship project at Duke, your Gatsby project might become overwhelming large. What happens when you want to add another tool to it? Should you increase the complexity and organization of your project? What if you could split it out into its own repo? Should you?

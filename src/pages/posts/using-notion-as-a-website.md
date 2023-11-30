@@ -1,8 +1,18 @@
 ---
 title: Using Notion as a Website??
-published: 2021-11-10
+published: 2021-11-10T00:00:00.000Z
 tags:
-    - Notion
+  - Notion
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  Build your perfect personal website with the flexible Notion platform. Stop
+  struggling with content creation and start writing freely and easily. Explore
+  the possibilities with a Notion page full of examples and ideas. Consider
+  using fruitionsite.com as a CMS with a Gatsby frontend. Discover the
+  brilliance of Cloudflare workers and their applications in the modern web.
+  Transition to https://github.com/transitive-bullshit/nextjs-notion-starter-kit
+  for a seamless experience.
 ---
 
 ## An Update in 2022…

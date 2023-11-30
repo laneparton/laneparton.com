@@ -1,10 +1,17 @@
 ---
 title: My Venture into Static Site Generators - Jekyll
-published: 2020-01-12
+published: 2020-01-12T00:00:00.000Z
 tags:
-    - Development
-    - Jekyll
-    - SSG
+  - Development
+  - Jekyll
+  - SSG
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  Discover the convenience and efficiency of using Jekyll and Gatsby to build
+  static websites. Learn how Jekyll's simplicity and clear syntax can turn you
+  from a beginner to a pro in no time, and stay tuned for an exciting future
+  post exploring Gatsby. #webdevelopment #staticsites
 ---
 
 Back in February, my team was tasked with updating the content on the Sensus Reach site, a site that promotes and supports our annual utility conference. While gathering requirements from internal stakeholders, it became apparent that more time would be spent working in the nuances of *The Keynote*, a WordPress theme, than it would take to build an entirely new site from the ground up.

@@ -10,23 +10,67 @@ export async function GET({ params, request } : APIContext) {
   let q = `../posts/${params.id}.md`;
   const { title, published } = pages[q].frontmatter;
 
+  const description = ""
+  const titleSize =
+  title.length < 40 ? "text-6xl" : "text-5xl"
+  const descriptionSize =
+    description.length < 80 ? "text-2xl" : "text-xl"
+
   const Nunito = await fetch('https://fonts.cdnfonts.com/s/15604/Nunito-Regular.woff').then(res => res.arrayBuffer())
 
   const markup = html`
-      <div style="width: 1200px;height: 768px;display: flex;flex-direction: column;">
-      <div style="width: 100%; background-color: #1c2836; height: 80%; display:flex; justify-content: center; padding: 0px 50px; flex-direction: column;">
-        <div style="font-size: 48px;font-weight: bold;color: #fff;padding-bottom: 20px;">${title}</div>
-        <div style="font-size: 24px;color: #fff;">${dayjs(published).format("MMMM D, YYYY")}</div>
+  <div tw="h-full w-full flex flex-col pt-16 px-16 relative text-2xl" style="background-color: #1c2836">
+      <div tw="rounded-3xl flex flex-col gap-0" style="background-color: #212f40; border: 1px solid #2f435b;">
+        <div tw="flex px-8 pb-0 mb-0">
+          <div tw="flex h-6 w-6 mt-8 mr-2 rounded-full border border-red-600 border-opacity-30 bg-red-500"></div>
+          <div tw="flex h-6 w-6 mt-8 mx-2 rounded-full border border-yellow-600 border-opacity-30 bg-yellow-500"></div>
+          <div tw="flex h-6 w-6 mt-8 mx-2 rounded-full border border-green-600 border-opacity-30 bg-green-500"></div>
+          <div tw="text-white mt-4 mx-8 px-12 py-2 rounded-full flex w-full" style="background-color: #1c2836; border: 1px solid #2f435b;">
+            laneparton.com
+          </div>
+        </div>
+        <div tw="flex flex-col w-full px-8 justify-between px-16 py-8">
+          <span tw="w-full uppercase text-lg font-bold text-white">
+            ${dayjs(published).format("MMMM D, YYYY")}
+          </span>
+          <h2
+            tw="flex flex-col text-left ${titleSize} font-bold text-white mb-0"
+          >
+            ${title}
+          </h2>
+          <p
+            tw="text-white ${descriptionSize} mb-8"
+            style="lineHeight: '2rem'"
+          >
+            ${description}
+          </p>
+          <div tw="flex justify-between items-end w-full">
+            <div tw="flex">
+              <img
+                tw="w-24 rounded-full"
+                src="https://avatars.githubusercontent.com/u/2521591?v=4"
+                alt=""
+              />
+              <div tw="flex flex-col px-4 py-2">
+                <span tw="font-bold text-white">
+                  ${" "}
+                  Lane Parton${" "}
+                </span>
+                <span tw="text-white">
+                  ${" "}
+                  @laneparton${" "}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div style="background-color: #212f40;width: 100%;height: 20%;display: flex;align-items: center;justify-content: flex-end;padding: 0px 50px;border-top: 3px solid #adb5bd26;">
-        <img src="https://avatars.githubusercontent.com/u/2521591?v=4" style="width: 60px;height: 60px;border-radius: 50%;margin-right: 20px;border: 2px solid #adb5bd26;">
-        <div style="font-size: 32px; color: #fff;">lane parton</div>
-      </div>
-    </div>`;
+    </div>
+    `;
 
   const svg = await satori(markup, {
     width: 1200,
-    height: 768,
+    height: 630,
     fonts: [
       {
         name: 'Nunito',
@@ -35,7 +79,15 @@ export async function GET({ params, request } : APIContext) {
     ],
   });
 
-  const resvg = new Resvg(svg)
+  const resvg = new Resvg(svg,{
+    fitTo: {
+      mode: 'width',
+      value: 1200,
+    },
+    font: {
+      loadSystemFonts: false, // It will be faster to disable loading system fonts.
+    },
+  })
   const pngData = resvg.render()
   const pngBuffer = pngData.asPng()
 

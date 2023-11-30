@@ -1,9 +1,15 @@
 ---
 title: DeveloperWeek 2020 - Hackathon Research
-published: 2020-02-15
+published: 2020-02-15T00:00:00.000Z
 tags:
-    - Conference
-    - JavaScript
+  - Conference
+  - JavaScript
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  Meta Description: A notepad of ideas and collaboration for different
+  challenges at the hackathon, including camera API, authentication, routing,
+  and reducing food waste.
 ---
 
 Quick Note: This post quickly turned into a notepad for ideas and collaboration with my team members :)

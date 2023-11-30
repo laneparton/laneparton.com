@@ -1,9 +1,14 @@
 ---
 title: Prettier + pre-commit hooks are the bomb
-published: 2022-07-19
+published: 2022-07-19T00:00:00.000Z
 tags:
-    - Development
-    - Git
+  - Development
+  - Git
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  "Learn how to use Git Hooks to automatically clean up your code on every
+  commit. Say goodbye to formatting inconsistencies with team members!"
 ---
 
 <aside>

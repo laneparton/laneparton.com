@@ -1,11 +1,15 @@
 ---
 title: Level Up the Vue Developer Experience with ESLint
-description: The Vue ESLint plugin integrates the Vue style guide into linting, enabling realtime feedback while coding. This helps reinforce good habits and learn Vue conventions more quickly.
-published: 2023-07-21
+description: >-
+  Level up your Vue development experience with eslint-plugin-vue. Get real-time
+  feedback and enforce consistent code quality.
+published: 2023-07-21T00:00:00.000Z
 tags:
-    - JavaScript
-    - Vue.js
-    - Tips/Tricks
+  - JavaScript
+  - Vue.js
+  - Tips/Tricks
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
 ---
 
 Getting acquainted with a new framework is always interesting. The first few weeks I spent with Vue, I was really impressed with the [Vue Style Guide](https://vuejs.org/style-guide/). It felt like the right amount of information and opinion to follow "best practices" in a framework I wasn't very comfortable with. Though, outside of keeping the style guide open, I wasn't quite sure how to utilize it. It was nice, but inaccessible when I was hard at work.

@@ -1,9 +1,16 @@
 ---
 title: DeveloperWeek 2020 - Thank You Bay Area
-published: 2020-02-28
+published: 2020-02-28T00:00:00.000Z
 tags:
-    - Conference
-    - JavaScript
+  - Conference
+  - JavaScript
+layout: >-
+  /Users/laneparton/Projects/Personal/laneparton.com/src/layouts/BlogLayout.astro
+description: >-
+  Discover the highlights of my experience at DeveloperWeek and the exciting
+  Hackathon in the Bay Area. From insightful sessions to exploring the tech
+  culture of San Francisco, I had an incredible time. Join me as I share my
+  journey!
 ---
 
 ### The Conference
