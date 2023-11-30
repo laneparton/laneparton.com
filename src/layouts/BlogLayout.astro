@@ -6,7 +6,8 @@ import dayjs from 'dayjs';
 import '../assets/css/tailwind.css';
 import { Image } from 'astro:assets';
 
-const { frontmatter } = Astro.props;
+const { frontmatter, slug } = Astro.props;
+console.log(slug)
 ---
 
 <!DOCTYPE html>
@@ -19,6 +20,13 @@ const { frontmatter } = Astro.props;
 			title={frontmatter.title + " | LP"}
 			twitter={{
 				creator: "@laneparton"
+			}}
+			openGraph={{
+				basic: {
+					title: frontmatter.title,
+					type: "A type.",
+					image: Astro.url.origin + '/images/' + slug + '.png',
+				}
 			}}
 			extend={{
 				// extending the default link tags

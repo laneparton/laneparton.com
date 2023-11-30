@@ -3,14 +3,15 @@ import satori from 'satori'
 import { html } from 'satori-html';
 import { Resvg } from '@resvg/resvg-js';
 import dayjs from 'dayjs';
+import { getCollection } from "astro:content";
 
-const pages = await import.meta.glob('../posts/*.md', { eager: true });
+const allPosts = await getCollection("posts");
 
 export async function GET({ params, request } : APIContext) {
-  let q = `../posts/${params.id}.md`;
-  const { title, published } = pages[q].frontmatter;
+  // Find the specific post using the route parameter
+  const post = allPosts.find(p => p.slug === params.id);
+  const { title, published, description } = post.data;
 
-  const description = ""
   const titleSize =
   title.length < 40 ? "text-6xl" : "text-5xl"
   const descriptionSize =
@@ -97,9 +98,11 @@ export async function GET({ params, request } : APIContext) {
 };
 
 export async function getStaticPaths() {
-  const paths = Object.keys(pages).map((path) => {
-    const [, id] = path.match(/\/posts\/(.*)\.md$/);
-    return { params: { id } };
-  });
+  // Generate paths from the posts
+  const paths = allPosts.map(post => {
+    const { slug } = post;
+    return { params: { id: slug } };
+  }).filter(Boolean);  // Filter out any undefined values
+
   return paths;
 }
