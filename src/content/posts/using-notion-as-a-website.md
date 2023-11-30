@@ -4,10 +4,9 @@ published: 2021-11-10T00:00:00.000Z
 tags:
   - Notion
 description: >-
-  A personal website update in 2022 using Next.js and Notion as a flexible
-  platform for content creation. Discover how Notion can be used as a CMS with a
-  Gatsby frontend and explore the benefits of using fruitionsite.com. Plus,
-  learn about the potential of Cloudflare workers in the modern web.
+  Explore the 2022 update on using Notion for flexible content creation.
+  Describes personal experiences, challenges, solutions, and future plans on
+  portfolio building.
 ---
 
 ## An Update in 2022…

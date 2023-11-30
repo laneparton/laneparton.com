@@ -5,10 +5,9 @@ tags:
   - Conference
   - Drupal
 description: >-
-  In-person experience at DrupalCon 2022 in Portland with diverse crowd. Keynote
-  on DEI in tech industry. Watch video and address homelessness issue. Strong
-  community in open-source development, with impressive contributions from
-  Ukraine.
+  Immerse yourself in this participant's insightful experience at DrupalCon
+  2022, discussing open-source innovation, DEI efforts in tech, and community
+  significance in web development.
 ---
 
 <aside>

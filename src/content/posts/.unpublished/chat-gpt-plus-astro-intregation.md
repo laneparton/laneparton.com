@@ -2,9 +2,13 @@
 title: Using Chat GPT To Generate Meta Descriptions
 published: 2023-11-30T00:00:00.000Z
 tags:
-    - Astro
-    - Development
-    - AI
+  - Astro
+  - Development
+  - AI
+description: >-
+  Boost your Astro project's SEO with automatically generated, AI-powered meta
+  descriptions using ChatGPT by OpenAI. Streamline development and improve
+  visibility.
 ---
 ## Overview
 In this post, we explore an innovative approach to enhancing SEO in Astro-based web projects by automatically generating meta descriptions using ChatGPT, an AI language model by OpenAI. This method not only streamlines the development process but also ensures that each page has a unique and relevant meta description.

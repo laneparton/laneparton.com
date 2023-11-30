@@ -5,9 +5,9 @@ tags:
   - Conference
   - JavaScript
 description: >-
-  Quick Note: A notepad for hackathon ideas. Topics include Canon Camera Control
-  API Challenge, Yubico Authentication, HERE Technologies Routing Challenge,
-  TomTom Points of Interest Challenge, and Amadeus Stress-Free Travel Challenge.
+  Explore our unique approach to hackathon challenges, showcasing collaborative
+  ideas on camera control, passwordless authentication, routing, etc. Be
+  inspired!
 ---
 
 Quick Note: This post quickly turned into a notepad for ideas and collaboration with my team members :)

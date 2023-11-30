@@ -10,6 +10,11 @@ const allPosts = await getCollection("posts");
 export async function GET({ params, request } : APIContext) {
   // Find the specific post using the route parameter
   const post = allPosts.find(p => p.slug === params.id);
+
+  if(!post) {
+    return
+  }
+
   const { title, published, description } = post.data;
 
   const titleSize =
@@ -41,7 +46,6 @@ export async function GET({ params, request } : APIContext) {
           </h2>
           <p
             tw="text-white ${descriptionSize} mb-8"
-            style="lineHeight: '2rem'"
           >
             ${description}
           </p>

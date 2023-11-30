@@ -1,10 +1,9 @@
 ---
 title: Hacking Together My New Portfolio
 description: >-
-  Build an impressive portfolio using cheap Envato designs and streamline the
-  process. Find inspiration in HTML/CSS patterns and implement them easily with
-  Nuxt. Optimize your designs by converting them to Tailwind. Consider migrating
-  to Astro in the future for a new framework experience.
+  Discover how to easily create an elegant portfolio using Envato designs and
+  Nuxt. Learn about design decision-making, implementation, optimization, and
+  migration.
 published: 2023-07-25T00:00:00.000Z
 hero: /images/hacking-together-my-new-portfolio.jpg
 tags:

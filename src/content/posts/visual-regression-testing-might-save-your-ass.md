@@ -5,10 +5,9 @@ tags:
   - Testing
   - Visual Regression Testing
 description: >-
-  A powerful tool for developers to avoid second-guessing their changes. Learn
-  how simple it is to use BackstopJS in four steps. Install globally, run
-  backstop init, test, and approve. Abstract scenarios into a scenarios.js file
-  for easier configuration. Have questions? Contact me on Twitter - @LaneParton.
+  Learn how to use BackstopJS, a powerful tool for developers. Helps to easily
+  test & monitor your websites for visual anomalies. Step-by-step guide
+  included.
 ---
 
 I recently came across a very powerful tool that allows us developers to leave behind the second-guessing nature of “I changed x, did it break in y?”

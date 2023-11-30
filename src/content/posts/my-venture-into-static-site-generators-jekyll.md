@@ -6,10 +6,8 @@ tags:
   - Jekyll
   - SSG
 description: >-
-  Discover the benefits of using Jekyll and Gatsby for building static websites.
-  From zero to hero, Jekyll provides convenience and efficiency, while Gatsby
-  takes it to the next level. Stay tuned for more on my venture into Gatsby and
-  share your experience with Jekyll.
+  Experience the efficiencies of static sites with our journey from WordPress to
+  Jekyll. Discover how minimal content drove us towards a server-less model.
 ---
 
 Back in February, my team was tasked with updating the content on the Sensus Reach site, a site that promotes and supports our annual utility conference. While gathering requirements from internal stakeholders, it became apparent that more time would be spent working in the nuances of *The Keynote*, a WordPress theme, than it would take to build an entirely new site from the ground up.

@@ -1,9 +1,9 @@
 ---
 title: Bun's Release Hype - A Step Towards Getting Acquired
 description: >-
-  Discover the driving force behind Bun's ROI and their plan to revolutionize
-  edge computing with their own platform, Oven.sh. Will they build it entirely
-  or aim for acquisition? Only time will tell.
+  Explore the latest with Bun 1.0, a new promising runtime in Node.js community.
+  Discussing possibilities, concerns, and potential impact on JavaScript stack
+  integration.
 published: 2023-09-13T00:00:00.000Z
 tags:
   - Hype

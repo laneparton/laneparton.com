@@ -6,9 +6,8 @@ tags:
   - PHP
   - WordPress
 description: >-
-  Learn how to fix the deployment of Sage 9 to WPEngine by swapping a simple
-  line of code. Get your theme up and running in no time with this easy
-  solution.
+  Discover the quick fix for deploying Sage 9 to WPEngine. Simple guide provided
+  by user pi_mont ensures your Sage 9 theme works flawlessly.
 ---
 
 While working on a site recently, I dove headfirst into Sage 9. It was an amazing experience that I’ll document later. One trivial note I wanted to enforce in the land of Google and searching for common problems is the fix I found when deploying Sage 9 to WPEngine.

@@ -1,8 +1,9 @@
 ---
 title: Level Up the Vue Developer Experience with ESLint
 description: >-
-  Boost your Vue development experience with eslint-plugin-vue. Get real-time
-  feedback on code quality and conventions, and reinforce good habits.
+  Improve your Vue skills with eslint-plugin-vue. Enhance coding quality and
+  maintain consistency across the team. Level up your Vue development experience
+  now.
 published: 2023-07-21T00:00:00.000Z
 tags:
   - JavaScript

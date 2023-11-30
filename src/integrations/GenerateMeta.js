@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 import OpenAI from 'openai';
 import { remark } from 'remark';
@@ -15,10 +16,10 @@ async function generateDescription(plainText, openAiApiKey) {
 
   return openAiClient.chat.completions.create({
     messages: [
-      { role: "system", content: "1. Never exceed 50-160 characters. 2. No extra words. 3. Exclude title." },
+      { role: "system", content: "Generate an SEO meta description. The description must be no more than 160 characters." },
       { role: "user", content: `Generate a meta description for: ${plainText}` }
     ],
-    model: "gpt-3.5-turbo",
+    model: "gpt-4",
   });
 }
 
@@ -31,20 +32,29 @@ function updateFileWithDescription(filePath, description) {
   fs.writeFileSync(filePath, newContent);
 }
 
-function filterMarkdownPages(pages) {
-  return Array.from(pages.keys()).filter(page => page.endsWith('.md'));
+function filterMarkdownPages(fullPath) {
+  const files = fs.readdirSync(fullPath);
+  return files.filter(file => file.endsWith('.md'));
 }
 
 export function generateMeta({ openAiApiKey }) {
   return {
     name: "generate-meta",
     hooks: {
-      "astro:build:setup": async ({ pages, logger }) => {
-        const markdownPages = filterMarkdownPages(pages);
+      "astro:build:setup": async ({ logger, target}) => {
+        if(target === 'client') {
+          return
+        }
+
+        const __filename = fileURLToPath(import.meta.url);
+        const __dirname = path.dirname(__filename);
+        const fullPath = path.join(__dirname, '../../src/content/posts/');
+
+        const markdownPages = filterMarkdownPages(fullPath);
 
         try {
           for (const filePath of markdownPages) {
-            const markdownData = fs.readFileSync(filePath, { encoding: 'utf8' });
+            const markdownData = fs.readFileSync(path.join(__dirname, '../../src/content/posts/' + filePath), { encoding: 'utf8' });
             const parsedMarkdown = matter(markdownData);
 
             if (parsedMarkdown.data.description) {
@@ -56,7 +66,7 @@ export function generateMeta({ openAiApiKey }) {
             const metaDescriptionResponse = await generateDescription(plainTextData, openAiApiKey);
             const metaDescription = metaDescriptionResponse.choices[0].message.content;
 
-            updateFileWithDescription(filePath, metaDescription);
+            updateFileWithDescription(path.join(__dirname, '../../src/content/posts/' + filePath), metaDescription);
             logger.info(`Updated ${filePath} with new meta description.`);
           }
         } catch (error) {

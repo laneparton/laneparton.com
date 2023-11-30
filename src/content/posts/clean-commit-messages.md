@@ -4,10 +4,9 @@ published: 2023-09-09T00:00:00.000Z
 tags:
   - JavaScript
 description: >-
-  Crafting meaningful commit messages is essential for developers. Learn why
-  they matter and how to improve them. Write semantic commit messages and
-  develop good commit hygiene for better code documentation and team
-  communication. Take the time to create commit messages you can be proud of!
+  Improve your coding with our guide to crafting meaningful commit messages.
+  Forget "fix bug" - learn why clear, descriptive commit messages level up your
+  development skills.
 ---
 We've all been there. It's late at night, you're racing to finish a feature, and you scribble a quick "fix bug" or "oops" as a commit message. No big deal, right?
 

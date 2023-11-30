@@ -5,9 +5,9 @@ tags:
   - Development
   - Git
 description: >-
-  Improve code consistency with Git Hooks. Learn how to automatically format
-  your code using pre-commit hooks and ensure a smooth collaboration with your
-  team.
+  Learn how to utilize Git Hooks for clean code implementation in VSCode.
+  Enhance team collaboration & easily overcome common barriers in project
+  workflows.
 ---
 
 <aside>

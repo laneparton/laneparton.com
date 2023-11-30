@@ -6,9 +6,9 @@ tags:
   - Gatsby
   - JavaScript
 description: >-
-  Build UI components and pages in isolation with Storybook, an open source
-  tool. Simplify UI development, testing, and documentation. Learn how to create
-  a shadowed Storybook project using Gatsby theme shadowing.
+  Simplify your Gatsby project with Storybook! Harness the power of open source
+  UI development tool, Storybook, combined with Gatsby's theme shadowing for a
+  streamlined, efficient process.
 ---
 
 In some projects, like our flagship project at Duke, your Gatsby project might become overwhelming large. What happens when you want to add another tool to it? Should you increase the complexity and organization of your project? What if you could split it out into its own repo? Should you?
