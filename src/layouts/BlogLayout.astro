@@ -40,7 +40,7 @@ const { frontmatter, slug } = Astro.props;
 	<body>
 		<Header />
         <main class="min-h-screen container">
-            <article class="my-36 mx-auto prose prose-invert">
+            <article class="my-36 mx-auto px-8 md:px-0 prose prose-invert">
 				{frontmatter.hero && (
 					<Image
 						class="w-full h-72 object-cover mb-12 rounded-lg"
@@ -63,4 +63,4 @@ const { frontmatter, slug } = Astro.props;
         </main>
 		<Footer />
 	</body>
-</html>../integrations/GenerateMeta
+</html>
