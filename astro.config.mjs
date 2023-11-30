@@ -4,6 +4,7 @@ import { generateMeta } from './src/integrations/GenerateMeta';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://laneparton.com',
   integrations: [
     tailwind({
       applyBaseStyles: false,

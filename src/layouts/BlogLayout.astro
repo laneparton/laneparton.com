@@ -24,7 +24,7 @@ const { frontmatter, slug } = Astro.props;
 				basic: {
 					title: frontmatter.title,
 					type: "A type.",
-					image: Astro.url.origin + '/images/' + slug + '.png',
+					image: Astro.url + '/images/' + slug + '.png',
 				}
 			}}
 			extend={{
