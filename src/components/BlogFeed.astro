@@ -14,7 +14,6 @@ const { limit } = Astro.props;
 allPosts.sort((a, b) => Date.parse(b.data.published) - Date.parse(a.data.published));
 
 const postsToDisplay = allPosts.slice(0, limit)
-console.log(postsToDisplay)
 ---
 
 <div>
