@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import matter from 'gray-matter';
 import OpenAI from 'openai';
 import { remark } from 'remark';
@@ -37,7 +36,7 @@ function filterMarkdownPages(fullPath) {
   return files.filter(file => file.endsWith('.md'));
 }
 
-export function generateMeta({ openAiApiKey }) {
+export function generateMeta({ openAiApiKey, postsPath = './src/content/posts' }) {
   return {
     name: "generate-meta",
     hooks: {
@@ -46,19 +45,20 @@ export function generateMeta({ openAiApiKey }) {
           return
         }
 
-        const __filename = fileURLToPath(import.meta.url);
-        const __dirname = path.dirname(__filename);
-        const fullPath = path.join(__dirname, '../../src/content/posts/');
+        // Resolving the path relative to the project root
+        const rootPath = process.cwd(); // This gets the root directory
+        const fullPath = path.resolve(rootPath, postsPath);
 
         const markdownPages = filterMarkdownPages(fullPath);
 
         try {
-          for (const filePath of markdownPages) {
-            const markdownData = fs.readFileSync(path.join(__dirname, '../../src/content/posts/' + filePath), { encoding: 'utf8' });
+          for (const pagePath of markdownPages) {
+            const filePath = path.join(fullPath, pagePath)
+            const markdownData = fs.readFileSync(filePath, { encoding: 'utf8' });
             const parsedMarkdown = matter(markdownData);
 
             if (parsedMarkdown.data.description) {
-              logger.info(`Description already present in ${filePath}`);
+              logger.info(`Description already present in ${pagePath}`);
               continue;
             }
 
@@ -66,8 +66,8 @@ export function generateMeta({ openAiApiKey }) {
             const metaDescriptionResponse = await generateDescription(plainTextData, openAiApiKey);
             const metaDescription = metaDescriptionResponse.choices[0].message.content;
 
-            updateFileWithDescription(path.join(__dirname, '../../src/content/posts/' + filePath), metaDescription);
-            logger.info(`Updated ${filePath} with new meta description.`);
+            updateFileWithDescription(filePath, metaDescription);
+            logger.info(`Updated ${pagePath} with new meta description.`);
           }
         } catch (error) {
           logger.error(`Error during description generation: ${error.message}`);

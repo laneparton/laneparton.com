@@ -64,3 +64,15 @@ const { frontmatter, slug } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
+<style is:global>
+
+.astro-code::-webkit-scrollbar {
+  background-color: #24292e;
+  height: 12px;
+}
+.astro-code::-webkit-scrollbar-thumb {
+	background-color: #3a434d;
+	border-radius: 12px;
+}
+</style>

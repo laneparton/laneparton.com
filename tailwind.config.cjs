@@ -6,6 +6,13 @@ module.exports = {
     ],
     theme: {
         extend: {
+            typography: {
+                DEFAULT: {
+                  css: {
+                    maxWidth: "76ch"
+                  }
+                }
+            },
             colors: {
                 midnightBlue: "#1c2836",
                 navyBlue: "#212f40",
