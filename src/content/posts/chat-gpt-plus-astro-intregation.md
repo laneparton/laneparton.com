@@ -6,9 +6,8 @@ tags:
   - Development
   - AI
 description: >-
-  Boost your Astro project's SEO with automatically generated, AI-powered meta
-  descriptions using ChatGPT by OpenAI. Streamline development and improve
-  visibility.
+  Learn how to generate and save SEO meta descriptions with GPT-4 and Astro
+  during a website's build process. Automate your content optimization!
 ---
 ## Overview
 I've been using ChatGPT's web interface since launch, but I haven't spent much time actually interfacing with the API. This week, it occurred to me that I am missing meta descriptions and that's an easily solved problem with an LLM like ChatGPT.
