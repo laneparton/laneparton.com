@@ -27,12 +27,14 @@ const { frontmatter, slug } = Astro.props;
 					title: frontmatter.title,
 					type: "article",
 					image: Astro.site?.origin + '/images/' + slug + '.png',
+				},
+				article: {
+					authors: ["Lane Parton"],
+					publishedTime: frontmatter.published
 				}
 			}}
 			extend={{
-				// extending the default link tags
 				link: [{ rel: "icon", href: "/favicon.png" }],
-				// extending the default meta tags
 				meta: [
 					{ name: "twitter:title", content: frontmatter.title },
 					{ name: "twitter:description", content: frontmatter.description },
@@ -40,6 +42,7 @@ const { frontmatter, slug } = Astro.props;
 						name: "twitter:image",
 						content: Astro.site?.origin + '/images/' + slug + '.png',
 					},
+					{ name: "author", content: "Lane Parton" },
 				],
 			}}
 		/>
