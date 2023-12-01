@@ -1,5 +1,5 @@
 ---
-title: Using Chat GPT To Generate Meta Descriptions
+title: Using ChatGPT To Generate Meta Descriptions
 published: 2023-11-30T00:00:00.000Z
 tags:
   - Astro
