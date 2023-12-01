@@ -18,13 +18,14 @@ const { frontmatter, slug } = Astro.props;
 		<link rel="sitemap" href="/sitemap-index.xml" />
 		<SEO
 			title={frontmatter.title + " | LP"}
+			description={frontmatter.description}
 			twitter={{
 				creator: "@laneparton"
 			}}
 			openGraph={{
 				basic: {
 					title: frontmatter.title,
-					type: "A type.",
+					type: "article",
 					image: Astro.site?.origin + '/images/' + slug + '.png',
 				}
 			}}
@@ -34,6 +35,11 @@ const { frontmatter, slug } = Astro.props;
 				// extending the default meta tags
 				meta: [
 					{ name: "twitter:title", content: frontmatter.title },
+					{ name: "twitter:description", content: frontmatter.description },
+					{
+						name: "twitter:image",
+						content: Astro.site?.origin + '/images/' + slug + '.png',
+					},
 				],
 			}}
 		/>
