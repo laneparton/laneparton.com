@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
 import sitemap from '@astrojs/sitemap';
+import partytown from '@astrojs/partytown';
 import { generateMeta } from './src/integrations/GenerateMeta';
 
 // https://astro.build/config
@@ -11,6 +12,7 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     sitemap(),
+    partytown(),
     generateMeta({ openAiApiKey: import.meta.env.VITE_OPENAI_API_KEY })
   ],
   vite: {
