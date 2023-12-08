@@ -245,6 +245,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"powering-in-app-help-with-llm.md": {
+	id: "powering-in-app-help-with-llm.md";
+  slug: "powering-in-app-help-with-llm";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "prettier-pre-commit-hooks-are-the-bomb.md": {
 	id: "prettier-pre-commit-hooks-are-the-bomb.md";
   slug: "prettier-pre-commit-hooks-are-the-bomb";
