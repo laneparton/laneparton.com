@@ -41,7 +41,7 @@ sudo docker run hello-world
 ...and install docker-compose, create a docker user, etc.
 
 ### Install `huggingface-hub` and Download a Model
-This is where things got interesting and really might be the crux of the whole post. CentOS 7 comes with Python 2.7 by default, and you'll need Python 3 to use `pip3`.
+This is where things got interesting and really might be the crux of the whole post. CentOS 7 comes with Python 2.7 by default, and you'll need Python 3 to use the `huggingface-hub` package.
 
 #### Install Python 3
 ```bash
@@ -66,30 +66,32 @@ I spent a lot of time fighting Python errors - trying to fix them - but all of t
 
 The error that led me there (for documentation) - it seemed like my huggingface-cli was out of date and didn't support the `download` command.
 ```bash
-$ huggingface-cli download TheBloke/Mistral-7B-v0.1-GGUF mistral-7b-v0.1.Q5_K_M.gguf --local-dir . --local-dir-use-symlinks False usage: huggingface-cli <command> [<args>] huggingface-cli: error: invalid choice: 'download' (choose from 'login', 'whoami', 'logout', 'repo', 'lfs-enable-largefiles', 'lfs-multipart-upload')
+$ huggingface-cli download TheBloke/Mistral-7B-v0.1-GGUF mistral-7b-v0.1.Q5_K_M.gguf --local-dir . --local-dir-use-symlinks
+False usage: huggingface-cli <command> [<args>]
+huggingface-cli: error: invalid choice: 'download' (choose from 'login', 'whoami', 'logout', 'repo', 'lfs-enable-largefiles', 'lfs-multipart-upload')
 ```
 
 Ultimately I landed on Python 3.8, installed `huggingface-hub` and was finally able to download the model I wanted.
 
 ## Comparing Docker Containers
-Honestly, I did a lot of this research ahead of time - but the order it belongs is the way this is written. I spent some time researching and looking for the various means of hosting an LLM on **CPU-Only** hardware - a term/keyword I learned in the process. The entire premise is "How can I host an LLM on my VM".
+I spent some time researching and looking for the various means of hosting an LLM on **CPU-Only** hardware - a term/keyword I learned in the process. The entire premise is "How can I host an LLM on a VM without a GPU" - with the added requirement of using a Docker container to isolate and standardize the deployment process.
 
-### llama.cpp
+### 1. llama.cpp
 llama.cpp is a port of Facebook's LlaMa model written in C/C++ and right now it seems to be the most advanced in terms of CPU-only infrastructure. Originally I was exploring Dockerfiles that I could host - but ultimately I landed on [llama-cpp-python](https://github.com/abetlen/llama-cpp-python) which can be [dropped straight into](https://python.langchain.com/docs/integrations/llms/llamacpp) my LangChain [example from last week](https://laneparton.com/posts/powering-in-app-help-with-llm/). Ultimately, llama.cpp was the easiest to spin up and for now, it will serve as my primary mechanism for hosting the LLM.
 
 #### Finding GGUF file
 llama.cpp specifically requires a `GGUF` file. It exposes an API/CLI to convert a model to this filetype - but I found that [TheBloke on huggingface](https://huggingface.co/TheBloke) provided all I needed to skip this step.
 
-### Ollama
+### 2. Ollama
 Prior to researching this - I thought Ollama was specifically built for Apple silicon. I guess I completely missed the "Linux" and "Windows" options when I first downloaded it. I was blind to the fact that it had a Dockerfile. At the time of writing, I have not explored Ollama on the VM - but I certainly will.
 
-### vLLM
+### 3. vLLM
 vLLM is highly discussed and referred to across the various communities talking about hosting open-source models. It has all the bells and whistles - describing itself as "A high-throughput and memory-efficient inference and serving engine for LLMs." However, [right now it is GPU-only](https://github.com/vllm-project/vllm/issues/632) and doesn't support CPU-only infrastructure.
 
 ## Next Steps
-With an LLM running in a docker container - I opted to wrap things up in a docker-compose and expose the LangChain playground to the web to **finally** test the LLM hosted on our new VM.
+With an LLM running in a docker container - I opted to wrap things up in a docker-compose and expose the LangChain playground via Nginx. This is where I could **finally** validate whether or not things were working (and ultimately answering: "Can I run an LLM on this VM?").
 
-It's important to note that this is simply an interim step in the larger process of hosting the PoC.
+Now, this is simply an interim step in the larger process of hosting the PoC - so take the following resources with a grain of salt. It just illustrates how simple LangChain is to host and expose.
 
 #### docker-compose.yml
 ```yaml
