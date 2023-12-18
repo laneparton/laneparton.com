@@ -259,6 +259,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"running-open-source-llm-models-on-centos-7.md": {
+	id: "running-open-source-llm-models-on-centos-7.md";
+  slug: "running-open-source-llm-models-on-centos-7";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "sage-9-wpengine.md": {
 	id: "sage-9-wpengine.md";
   slug: "sage-9-wpengine";
