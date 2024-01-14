@@ -196,6 +196,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"convert-bookmarks-to-links-astro.md": {
+	id: "convert-bookmarks-to-links-astro.md";
+  slug: "convert-bookmarks-to-links-astro";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "developerweek-2020-hackathon-research.md": {
 	id: "developerweek-2020-hackathon-research.md";
   slug: "developerweek-2020-hackathon-research";

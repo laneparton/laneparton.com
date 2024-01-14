@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import bookmarks from "../content/bookmarks/bookmarks.json";
-
-console.log(bookmarks);
+import CalloutCard from "../components/CalloutCard.astro";
 
 const groupedBookmarks = {};
 
@@ -24,17 +23,22 @@ bookmarks.forEach(bookmark => {
   <div class="container mx-auto mb-12 mt-32">
     <h2 class="text-4xl text-white mb-4 mt-12">Links</h2>
     <p class="mb-8">
-      Things I liked reading or watching and want to find again in the future
+      Things I found interesting and worthy of looking at again 🙂
     </p>
+
+    <CalloutCard>
+      <p>👋🏻 Curious how this is generated? Read more <a href="/posts/convert-bookmarks-to-links-astro/">here</a>.</p>
+    </CalloutCard>
 
     {
       Object.entries(groupedBookmarks).map(([monthYear, bookmarks]) => (
         <div key={monthYear}>
           <h3 class="text-2xl text-white mt-8 mb-4">{monthYear}</h3>
-          <ul class="list-disc list-inside">
+          <ul>
             {
             bookmarks.map((bookmark) => (
-              <li key={bookmark.href} class="mb-2 text-lg">
+              <li key={bookmark.href} class="mb-2 text-lg flex items-center">
+                <img src={bookmark.icon} class="mr-2" />
                 <a href={bookmark.href}>
                   {bookmark.title}
                 </a>

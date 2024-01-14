@@ -1,3 +1,31 @@
+---
+title: Astro Integration to Source Chrome Bookmarks
+published: 2024-01-14T00:00:00.000Z
+tags:
+  - Astro
+  - JavaScript
+  - Development
+description: ''
+---
+
+I've seen a few people recently on Twitter mention the idea of hosting/storing bookmarks and links their websites. For whatever reason - it hit home with me and sounded like an awesome idea!
+
+I wanted to make it as easy as possible. Naturally, JSON sounds like a great way to organize them for my implementation. That said, I didn't really want to build a new process around maintaining a JSON file manually. I enjoy the bookmarking experience in Chrome, even though I would say I'm picky about what I actually bookmark.
+
+So - I found the button in Google Chrome that allows you to export your bookmarks via [chrome://bookmarks/](chrome://bookmarks/)
+
+![chrome://bookmarks/](../../assets/images/Chrome-Bookmarks.png)
+
+This generates an HTML file of the format `<!DOCTYPE NETSCAPE-Bookmark-file-1>` that lists your bookmarks by folder with: `URL`, `Added Date`, `Favicon`, and of course `Title`. Naturally, you can see how all of this would be useful for generating a JSON file to reference in an Astro page/component.
+
+I copied that file into a local directory `/src/content/bookmarks` and setup the JavaScript below to build a `bookmarks.json` at build time. There are a few known caveats:
+
+- I added the `.html` to `.gitignore` so my personal bookmarks aren't leaked to GitHub
+- I plan on building/generating this locally (right now)
+- I plan on deleting `bookmarks.json` and copying in a new `bookmarks.html` whenever I want to update the list.
+- I'm curating these links under a `Published Bookmarks` folder.
+
+```js
 import fs from 'fs';
 import path from 'path';
 import { JSDOM } from 'jsdom';
@@ -67,3 +95,6 @@ export function generateBookmarks({ bookmarksPath = './src/content/bookmarks' })
         }
     };
 }
+```
+
+All of this could be iterated on - and probably done better. This works for me right now - and is a great starting place to hosting a `Links` page on my website. If you have suggestions or ideas - feel free to @ me on X/Twitter 🙂
