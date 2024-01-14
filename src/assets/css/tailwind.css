@@ -28,7 +28,7 @@ p {
     line-height: 1.7;
 }
 
-[astro-icon] {
-    display: inline-block;
+[data-icon] {
+    display: inline-flex;
     width: 1rem;
 }

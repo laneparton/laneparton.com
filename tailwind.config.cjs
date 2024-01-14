@@ -19,6 +19,7 @@ module.exports = {
                 slateBlue: "#2f435b",
                 lightBlue: "#9bacc4",
                 lightOrange: "#f7961c",
+                darkerOrange: "#ef8908",
                 faintBlue: "#2a3c51"
             },
             container: {

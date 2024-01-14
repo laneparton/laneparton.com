@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../../../layouts/Layout.astro";
+import BlogFeed from "../../../components/BlogFeed.astro";
+import slugify from 'slugify'
+
+export async function getStaticPaths() {
+    const blogEntries = await getCollection('posts');
+
+    const uniqueTags = [...new Set(blogEntries.map((post) => post.data.tags).flat())];
+
+    return uniqueTags.map((tag) => {
+        const filteredPosts = blogEntries.filter((post) => post.data.tags.includes(tag));
+        const tagSlug = slugify(String(tag), { lower: true }); // Slugify the tag
+
+        return {
+            params: { slug: tagSlug, tag: tag }, // Use the slugified tag as a parameter
+            props: { tag, posts: filteredPosts },
+        };
+    });
+}
+
+const { tag, posts } = Astro.props;
+---
+<Layout title="Posts">
+    <div class="min-h-screen container mx-auto mt-24 mb-12">
+        <h2 class="text-3xl text-white mb-4">Posts tagged "{tag}"</h2>
+        <BlogFeed posts={posts} />
+    </div>
+</Layout>
+  

@@ -4,7 +4,11 @@ import CalloutCard from "../components/CalloutCard.astro";
 import BlogFeed from "../components/BlogFeed.astro";
 import { Image } from "astro:assets";
 import headshot from "../assets/images/Headshot.png";
-import { Icon } from "astro-icon";
+import { Icon } from 'astro-icon/components';
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+const blogPosts = allPosts.sort((a, b) => Date.parse(b.data.published) - Date.parse(a.data.published)).slice(0, 5)
 ---
 
 <Layout title="Home">
@@ -21,18 +25,15 @@ import { Icon } from "astro-icon";
       <div class="w-full md:w-1/2 lg:w-3/4 flex flex-col justify-center">
         <h2 class="text-4xl text-white mb-4">Hey! I'm Lane.</h2>
         <p class="mb-6">
-          As a <strong class="text-white">Software Engineer</strong> with proven
-          experience in design and user experiences, I'm dedicated to creating
-          intuitive and engaging interfaces that push the boundaries of what
-          technology can do.
+          I'm a web developer turned software engineer, committed to bridging the gap between development teams and business objectives. As an <a href="/about-me" class="font-semibold">Undeveloped Developer</a>, I embrace my beginner's mindset, sharing my learnings in all forms as I explore the complexities of tech and business.
         </p>
         <p class="mb-6">
-          At <a
+          Working at <a
             href="https://www.xylem.com/"
             target="_blank"
             class="font-semibold"
-          >Xylem</a>, I collaborate with a talented team to develop innovative
-          solutions that bring smart metering data straight to our customers.
+          >Xylem</a>, I collaborate with talented foks developing innovative
+          solutions that bring smart metering data to our users in consumable formats.
         </p>
         <div class="flex text-white text-4xl social-links">
           <a
@@ -41,7 +42,7 @@ import { Icon } from "astro-icon";
             target="_blank"
             aria-label="GitHub"
           >
-            <Icon name="fa-brands:github" />
+            <Icon name="fa6-brands:github" />
           </a>
           <a
             href="https://www.linkedin.com/in/lane-parton/"
@@ -49,7 +50,7 @@ import { Icon } from "astro-icon";
             target="_blank"
             aria-label="LinkedIn"
           >
-            <Icon name="fa-brands:linkedin" />
+            <Icon name="fa6-brands:linkedin" />
           </a>
           <a
             href="https://twitter.com/laneparton"
@@ -57,7 +58,7 @@ import { Icon } from "astro-icon";
             target="_blank"
             aria-label="Twitter"
           >
-            <Icon name="fa-brands:twitter" />
+            <Icon name="fa6-brands:x-twitter" />
           </a>
         </div>
       </div>
@@ -82,7 +83,7 @@ import { Icon } from "astro-icon";
             you.
           </p>
           <a href="/about-me" class="btn-custom mt-auto">
-            Learn More About Me <Icon name="fa-solid:arrow-right" />
+            Learn More About Me <Icon name="fa6-solid:arrow-right" />
           </a>
         </CalloutCard>
       </div>
@@ -102,7 +103,7 @@ import { Icon } from "astro-icon";
             needs and goals.
           </p>
           <a href="mailto:hello@laneparton.com" target="_blank" class="btn-custom mt-auto">
-            Get in Touch <Icon name="fa-solid:arrow-right" />
+            Get in Touch <Icon name="fa6-solid:arrow-right" />
           </a>
         </CalloutCard>
       </div>
@@ -110,11 +111,12 @@ import { Icon } from "astro-icon";
   </div>
 
   <div class="container mt-12 lg:mt-24 lg:mb-12">
-    <BlogFeed limit={5} />
+    <h2 class="text-3xl text-white mb-4">Latest Posts</h2>
+    <BlogFeed posts={blogPosts} />
     <div class="flex flex-wrap">
       <div class="w-full mt-4">
         <a href="/posts" class="text-primary btn-custom">
-          See More Posts <Icon name="fa-solid:arrow-right" />
+          See More Posts <Icon name="fa6-solid:arrow-right" />
         </a>
       </div>
     </div>
@@ -123,7 +125,7 @@ import { Icon } from "astro-icon";
 
 <style lang="scss" scoped>
 	.social-links {
-		[astro-icon] {
+		[data-icon] {
 			width: 2rem;
 		}
 	}

@@ -1,4 +1,6 @@
 module.exports = {
     root: true,
-    extends: ["@nuxt/eslint-config"],
+    extends: [
+        "plugin:astro/recommended",
+    ],
 };

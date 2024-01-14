@@ -1,22 +1,17 @@
 ---
-import { Icon } from "astro-icon";
-function getCurrentYear() {
-  const currentDate = new Date();
-  const currentYear = currentDate.getFullYear();
-  return currentYear;
-}
+import { Icon } from 'astro-icon/components';
 
 const socialLinks = [
   {
-    icon: 'fa-brands:github',
+    icon: 'fa6-brands:github',
     link: 'https://github.com/laneparton/'
   },
   {
-    icon: 'fa-brands:linkedin',
+    icon: 'fa6-brands:linkedin',
     link: 'https://www.linkedin.com/in/lane-parton/'
   },
   {
-    icon: 'fa-brands:twitter',
+    icon: 'fa6-brands:x-twitter',
     link: 'https://twitter.com/laneparton'
   },
 ]
@@ -24,27 +19,29 @@ const socialLinks = [
 
 <footer
   id="footer"
-  class="bg-navyBlue mt-8 py-6 shadow-inner footer"
+  class="bg-navyBlue mt-16 py-6 shadow-inner footer"
   role="contentinfo"
 >
   <div class="container mx-auto">
     <div class="flex flex-wrap justify-between items-center">
-      <div class="w-full md:w-1/2 text-center md:text-left flex ">
-        <p class="mb-0">
-          &copy; {getCurrentYear()} Lane Parton
-        </p>
-      </div>
-      <nav
-        class="w-full md:w-1/2 text-center md:text-right text-white text-3xl"
-        role="navigation"
-        aria-label="Footer Social Links Menu"
-      >
-      {socialLinks.map(social => (
-        <a href={social.link} class="mx-2" target="_blank">
-          <Icon name={social.icon} />
+      <div class="w-full md:w-1/2 text-center md:text-left flex items-center">
+        <a class="font-normal text-white text-4xl tracking-wide" href="/">
+          &lt;/lp&gt;
         </a>
-      ))}
-      </nav>
+      </div>
+      <div class="w-full md:w-1/2 text-center md:text-right flex items-center justify-end">
+        <nav
+          class=" text-white text-3xl"
+          role="navigation"
+          aria-label="Footer Social Links Menu"
+        >
+        {socialLinks.map(social => (
+          <a href={social.link} class="mx-2" target="_blank">
+            <Icon name={social.icon} />
+          </a>
+        ))}
+        </nav>
+      </div>
     </div>
   </div>
   <!-- Google tag (gtag.js) -->
@@ -73,7 +70,7 @@ const socialLinks = [
     box-shadow: inset 0 0 3px #adb5bd26;
   }
 
-  [astro-icon] {
+  [data-icon] {
     width: 1.5rem;
   }
 </style>

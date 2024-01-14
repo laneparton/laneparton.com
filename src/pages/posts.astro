@@ -2,6 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import CalloutCard from "../components/CalloutCard.astro";
 import BlogFeed from "../components/BlogFeed.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+allPosts.sort((a, b) => Date.parse(b.data.published) - Date.parse(a.data.published));
 ---
 
 <Layout title="Posts">
@@ -16,20 +20,21 @@ import BlogFeed from "../components/BlogFeed.astro";
             >
             </span>
           </h5>
-          <p>
+          <p class="mb-2">
             Like many, <a href="https://joelhooks.com/digital-garden">
               Joel Hooks
             </a> introduced me to the idea of a digital garden. Here, I focus on
-            process and ideas rather than fully-baked blog posts. Additionally,
-            if you'd like to learn more about digital gardens, I suggest reading
+            process and ideas rather than fully-baked blog posts.
+          </p>
+          <p>If you'd like to learn more about digital gardens, I suggest reading
             <a href="https://maggieappleton.com/garden-history">
               <i>A Brief History & Ethos of the Digital Garden</i> by Maggie
               Appleton
-            </a>
-          </p>
+            </a></p>
         </CalloutCard>
       </div>
     </div>
-    <BlogFeed limit={99} />
+    <h2 class="text-3xl text-white mb-4">Latest Posts</h2>
+    <BlogFeed posts={allPosts} />
   </div>
 </Layout>

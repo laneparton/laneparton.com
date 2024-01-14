@@ -1,7 +1,5 @@
 ---
-import { Image } from "astro:assets";
-import logo from "../assets/images/logo.svg";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 const navLinks = [
   {
@@ -16,54 +14,74 @@ const navLinks = [
     text: "Posts",
     to: "/posts",
   },
+  {
+    text: "Videos",
+    to: "/videos",
+  },
+  {
+    text: "Bookmarks",
+    to: "/bookmarks",
+  },
 ];
 ---
 
 <script>
+  function openNav() {
+    const navDrawer = document.getElementById("nav-drawer");
+    navDrawer?.classList.add("show");
+
+    const backdrop = document.getElementById("backdrop");
+    backdrop?.classList.add("show");
+    backdrop?.addEventListener("click", closeNav);
+  }
+
+  function closeNav() {
+    const navDrawer = document.getElementById("nav-drawer");
+    navDrawer?.classList.remove("show");
+
+    const backdrop = document.getElementById("backdrop");
+    backdrop?.classList.remove("show");
+    // Remove click event listener to prevent memory leaks
+    backdrop?.removeEventListener("click", closeNav);
+  }
+
   function toggleNav() {
     const navDrawer = document.getElementById("nav-drawer");
     if (navDrawer?.classList.contains("show")) {
-      navDrawer?.classList.remove("show");
+      closeNav();
     } else {
-      navDrawer?.classList.add("show");
-    }
-
-    const backdrop = document.getElementById("backdrop");
-    backdrop?.addEventListener("click", () => toggleNav());
-    if (backdrop?.classList.contains("show")) {
-      backdrop?.classList.remove("show");
-    } else {
-      backdrop?.classList.add("show");
+      openNav();
     }
   }
 
-  const navbar = document.getElementById("topnav");
-  window.addEventListener('scroll', handleScroll)
-  function handleScroll() {
-    if (navbar) {
-      if (window.scrollY >= 50) {
-        navbar.classList.add("sticky-shadow");
-      } else {
-        navbar.classList.remove("sticky-shadow");
-      }
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeNav();
     }
-  }
+  });
 
   const navButton = document.getElementsByClassName("nav-button")[0];
-  navButton.addEventListener("click", () => toggleNav());
+  navButton.addEventListener("click", toggleNav);
 
   const navClose = document.getElementById("close-nav");
-  navClose?.addEventListener("click", () => toggleNav());
+  navClose?.addEventListener("click", closeNav);
 </script>
 
-<header id="topnav" class="w-full fixed z-10 top-0 px-4 bg-midnightBlue">
+<header
+  id="topnav"
+  class="w-full fixed z-10 top-0 px-4 bg-midnightBlue sticky-shadow"
+>
   <div class="container flex py-4">
-    <a class="flex items-center font-normal text-gray-900" href="/">
-      <Image src={logo} alt="Logo" width="46" height="46" />
-      <span class="ml-4 text-white text-2xl tracking-wider">lane parton</span>
+    <a class="font-normal text-white text-4xl tracking-wider" href="/">
+      &lt;lp&gt;
     </a>
-    <button type="button" aria-controls="nav-drawer" class="ml-auto nav-button" aria-label="Open Navigation">
-      <Icon name="fa-solid:bars" />
+    <button
+      type="button"
+      aria-controls="nav-drawer"
+      class="ml-auto nav-button text-white bg-lightOrange hover:bg-darkerOrange rounded-sm"
+      aria-label="Open Navigation"
+    >
+      <Icon name="fa6-solid:bars" class="nav-icon" />
     </button>
 
     <div
@@ -77,7 +95,7 @@ const navLinks = [
           class="mr-4 ml-auto text-3xl py-4 text-white"
           aria-label="Close Navigation"
         >
-          <Icon name="ic:round-close" id="close-nav" />
+          <Icon name="fa6-solid:xmark" id="close-nav" />
         </button>
       </div>
       <div class="h-full flex items-center justify-center">
@@ -114,10 +132,20 @@ const navLinks = [
   }
 
   .nav-button {
-    @apply text-white bg-lightOrange rounded-sm;
     height: 40px;
     width: 40px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     line-height: 24px;
+  }
+
+  .nav-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  #close-nav {
+    width: 2rem;
   }
 </style>
