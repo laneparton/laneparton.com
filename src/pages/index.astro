@@ -14,15 +14,16 @@ const blogPosts = allPosts.sort((a, b) => Date.parse(b.data.published) - Date.pa
 <Layout title="Home">
   <div class="container py-6 mt-36">
     <div class="flex flex-wrap">
-      <div class="w-3/4 lg:w-1/4 md:w-1/2 text-center mx-auto">
+      <div class="w-full lg:w-1/4 text-center mx-auto mb-5 lg:mb-3">
         <Image
           src={headshot}
           alt="Headshot of Lane"
-          class="w-full h-auto rounded-full mb-5 lg:mb-3 md:pe-8"
-          width="380"
+          class="object-none object-center rounded-full"
+          width="253"
+          quality="max"
         />
       </div>
-      <div class="w-full md:w-1/2 lg:w-3/4 flex flex-col justify-center">
+      <div class="w-full lg:w-3/4 flex flex-col justify-center">
         <h2 class="text-4xl text-white mb-4">Hey! I'm Lane.</h2>
         <p class="mb-6">
           I'm a web developer turned software engineer, committed to bridging the gap between development teams and business objectives. As an <a href="/about-me" class="font-semibold">Undeveloped Developer</a>, I embrace my beginner's mindset, sharing my learnings in all forms as I explore the complexities of tech and business.
