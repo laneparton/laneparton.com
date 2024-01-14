@@ -40,10 +40,14 @@ async function processBookmarksFolder(folderPath) {
         }
     }
 
-    // Write all bookmarks to a single JSON file
-    const jsonFilePath = path.join(folderPath, 'bookmarks.json');
-    fs.writeFileSync(jsonFilePath, JSON.stringify(allBookmarks, null, 2));
-    console.log('All bookmarks saved to:', jsonFilePath);
+    // Only write to bookmarks.json if allBookmarks is not empty
+    if (allBookmarks.length > 0) {
+        const jsonFilePath = path.join(folderPath, 'bookmarks.json');
+        fs.writeFileSync(jsonFilePath, JSON.stringify(allBookmarks, null, 2));
+        console.log('All bookmarks saved to:', jsonFilePath);
+    } else {
+        console.log('No bookmarks found. bookmarks.json was not overwritten.');
+    }
 }
 
 // Astro integration
