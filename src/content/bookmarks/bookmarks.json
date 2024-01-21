@@ -52,5 +52,59 @@
     "href": "https://utteranc.es/",
     "add_date": "2023-07-18T00:49:50.000Z",
     "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACy0lEQVQ4jW2ST2hcZRTFf9/3/mZeJpPETMOkNWkKFWUWVsdBwaYLLeqi0VahGzeuBEF0Jbhx5aK4EyziUnAlKArW4D8CcWElEkydpqWB6pCQmSaTZvIyzZv39/tcVIcpyYG7ufece+GcK+iD67qTAEqppwTqddsaeSRNfEdp3cy0XpQy/TyOWenXiH6xzrIvpBCl4mh54rHjL3rTpSeRhkvQbXGj/hM36/PXg7Dz0alT5S+XlpaS3gLbpiy09ekrj5+eOVKsisEjFxkZPtp/CJ1m1Bu/MXf10n7z7rX3k0RdBjAADMOeMQ3x9jsvvGVXH52lnY2D0r0SUtKpeowZxyjlTtrrm8tPhElrQSkaBoCUmZfPTV0sjL/m7WTjWObAA9c7VY/22SHUgGTizhhBsJu/vXE11VrPyfsU+cyJo9Wil5vgMORWI7zrXbxrAQDlE2fJuaNnXNedlABay6mR/DQAURIdWGC0E8a+38OtR+hMkc+Nk88VH1IqzJv9xNHhXRyrTbc7imXaB0w8DLJSqVha61y78w/V6lece/ljpHnjUDKAMCSdYJNO0LorpduRtVpt1rGMN86f+47Tz37N5MOrXDj/IRnLJGn8n0r0SmeKlb9/IQh3fg3DcM2wLGs/TtLBnS1RLpUC6+S0w49X3qS+MUmUdJFCk6Zd0JI42eP2+gILf37WitOd95SiYaRp6mut57Z2rbXVW8ZLe63nrfrGqwjhAhCnEXEaEcYdmtt/Mb90eX/bv/VBkuhve48EMDTkrTe34jN5HU/NPF3CMDJsWzDghgznmxyfWMFxfmZx+Y9gP44vKUUDoJeC7/ttxza3i65iIPydYw7g9LkXwuC9FgBJQi+iB2JMM/ObK7XN51phbbjoqgMJLN5pBK172XyhULjp+/59f/sJlUrFqtVqs0Lrd6UQpf6ZaRWibtT+wTTNT8IwXPu//y8fRj0uA6gtcAAAAABJRU5ErkJggg=="
+  },
+  {
+    "title": "Onur Şuyalçınkaya",
+    "href": "https://onur.dev/",
+    "add_date": "2024-01-17T02:07:26.000Z",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA3ElEQVQ4ja3TQU7DQAwF0JdRF70CN0BcBpbkgl3DCSquQCU4AexS9qVk2DhgjVIlElgaybH//7G/ZviNDvfY4RkDapwharvAdJq4wj4Rls4+OGCLp2h84owvjIkwRu0cmBqcLfRROCXiOCMwJqFT1PsN7qLRpd3aHafvmnAjbje4iUKZM+eC0IS9hmMz5pKBGXfsIsnjrYkfbFlJuChU8NEor/n7FEPBW9pvzQpdwr8XvCRz6sIUtcG+FjyEF7UxtM4Qc17w6D+usr8+pmxOH0/2kC5YjfwQvT6b/Q2vaIQzs8PyMgAAAABJRU5ErkJggg=="
+  },
+  {
+    "title": "The Grug Brained Developer",
+    "href": "https://grugbrain.dev/",
+    "add_date": "2024-01-17T12:38:26.000Z",
+    "icon": null
+  },
+  {
+    "title": "Alex Russell - Infrequently Noted",
+    "href": "https://infrequently.org/about-me/",
+    "add_date": "2024-01-17T12:39:32.000Z",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABkklEQVQ4jY2SO6vqQBSFZ/bEJIJvCUqwEBE0VtaCWGhhK2Lvz7Hxx9intbKxEtTGVssYR+M89i3iDeFwzz3nK/deexasWdR1XfIXSikiUkrJ9xjpdaxGxC+i9ENGev2dQ3oIiZQxhogAkD5DxMQ25nMgpQyCgBAShiHnHABer5cQIm0eA7G6Wq2Ox2NK6XA47PV69/u90+k4jiOEAAAppRDi4wAAnHPP82az2fV6rdVqq9UKAIQQ7/ebMfZ8PguFguM4iKi1ZqVSKQiC+Xx+PB5Pp9P5fO73++122/d9QgjnfDQaVSoVpdRkMtntdqC1zmQy3W53v99ns1nbttfr9WKxaDabUkrbtqfT6Xa7zeVy5XJZSsksy2o0GoPBYLPZeJ4XRdHlckHE2+22XC4PhwNjjHPearV831dK0Xq9bpqm1poQYllWFEVa6yiKDMPI5/OPx0MIUSwWwzDUWpumSV3XTVLXWifxIaJSijFGKVVKJf9jxOs4bMZYOnjDML7MKaWfavyzQj+U7/8lTYDfiNL8AUvi4vXiTrBcAAAAAElFTkSuQmCC"
+  },
+  {
+    "title": "Making Sense of React Server Components",
+    "href": "https://www.joshwcomeau.com/react/server-components/#introduction-to-react-server-components-3",
+    "add_date": "2024-01-17T13:37:27.000Z",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADkUlEQVQ4jTWTS0xcdRjFz/e/l3vnzpN5wOVNsVQK9VVJILgwNdYmtqYGLMSFEReufSZNG6KdZePGRI1pbaJ1obHSRtOg6WPR+qipxlIRaUkgNDwEhsfMMDN37tzn5wI863N+m5MfYTsCgD8yPPC07+Ks5XuNQVWdsayKkzfM/eGg5qRikZtg9/2Rzy6M/98HAGkHwM+3t6uheOysaVV6iuWybNpOoxZQmzzPFYZpy5brdWiKMtDbuWvx1uTM5M4OEgACQC8823dOUZQBl32HACmzkeWy7frBQIBMyyLTsjzDsiPJWPTYE+0t+u17sz8CIAkA3h48/KZE4kTRNG3b9aoURUEiGqKF5VUyHReCgGLJkIyy6VUcz0tEw71dzfrUnZn5KRkAZFk+ksnmfMt2hON6gBCIx2Lo3N1Kt+7+g4AW5HyhyBu5vNCTcV/u6vAjmtYPYFQ+Pni0o2CUH3ddn3KFkljbzDER0YKcoXq9hlsb6vDH3UlqbKz3NU+jiQdL5Ps+PbLnIRcA5IprtRXLZiIQUDH/7woNv3gI9Q0NdOG7H3gts0Y9ne049doxVgIaCdfG6S8vIhIOk0QiBADySm59NhqKlTfzW9EWvcY/nj5BUiKOwSMHaWpiEoX8FupqUhSPV7MkC/5rboF+nX6ASDgY2/7fERIRaGl5lQdfGYJU14qTI6dx8pPP0floF1p2tyH9xSifuXyNknotPdXTTcWSAcu2YgBk0aTrjmDiRCqFwy/1EyoFHhu7zufOj/Lc1DQ2V9b40o3f6MpPv7Pvurx37x5u0mu4YtnSgQOA3Pfy8PzFjz+Yqa3Tn9Tra33cm6Vr/a/yfa0o8nPL7HgOXX3vXW7eklFZyFK0OuJXh4MwLXvz5i9wxdDQkJdZz157bN/DJNsGjPUMlQobFAupHGyrJaUpyQq5KPtlbBQLHNFUPxEN0+rG5h0AEMxMf07PfdTd223ALEol2XKK+2tQQAUbSwu8tbyMLViUbVG5EvAdOJ4SjMYu3b4/dyqdhpABwABWx65ef71vX/OnqmvG2Sw4fikr/HKJhM+sqgHWKAA9ElBnF5fGz1/5+S1m2ESAICJmgD488/U3fq7wjAxvvCEkqpKSIdUqZdEQsqSmGMvNqaDs2tblUMg8lM1ml4i2JZSxbRNzOi2od2CC//7qoFK16x01GHiumFsLubaVl7TIYnUy9X310Te+3ZGQADAA/AfYmLP8Z36MggAAAABJRU5ErkJggg=="
+  },
+  {
+    "title": "Common mistakes with the Next.js App Router and how to fix them – Vercel",
+    "href": "https://vercel.com/blog/common-mistakes-with-the-next-js-app-router-and-how-to-fix-them",
+    "add_date": "2024-01-17T15:56:57.000Z",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJ0lEQVQ4ja2TMYrCUBCGv/cMWcRusfAAeokE7NPZCFtsbedJYuUZFlxL8Qh6hxRpArF5hWtlCCiZbZ7Lxry4sLsD08z888Ew/0A9noAIeAcOwMXmwdYiq3HGAFgCJ0Ba8mQ1A9fw5sHgfW6+Q3xLbQg9zxPf99sgSztLBBxdoslkIrPZrA1wtLOsXIJ+vy+73U7SNJXRaNQGWQHkruZ8Ppfr9SoiIovFQrTWLkCOPVOtMRwOJUkSuYUxRoIgcAEuDYDWWuI4lvtYr9fS7XadgNoKQRCIMaYBKIpCptNpYwUP2AMvAEopxuMxeZ6TZVnNKJ1OhzAM2W63lGV5K++VPcUb8KyUotfrobV2WlVEOJ/PVFUF8AG8PjTSD/llpD9b+V+e6dfv/An3+wTVwO8WqgAAAABJRU5ErkJggg=="
+  },
+  {
+    "title": "Writings of sussman@",
+    "href": "https://social.clawhammer.net/blog/posts/2005-09-25-FirstWeekAtGoogle/",
+    "add_date": "2024-01-18T13:58:39.000Z",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACNUlEQVQ4jY2SS0hVURSGv7XvOfdeKcUiVHTQQw2cVKMGEUhJDzFqEBQVGUqvidCogaMmzSSCBg3CkKAkgwRBjGYFETYRCix7Wc6U1Jsdva+z92pw7rmpNPAf7Z//X/9ea7GEEjo7tcH33Q0RDquyHUgClSU5AzhgFhgHc7+/X94BCEB3d/EgTkeBKjYCJRThWv9A8qH09GgqyOR+ArUA1VuEpibD3KwyM+MAqG8Q6usN09OO+V8ax+StaKMXzK8cV9FagB07DTd7U1RUCABDgwWCQOm6nEIECgW425fj46QFSIlKh6fW7laJUts7kqTTwpNHORIJOH02jbXKyPM8i4vKxa40J056TH4oACCqWz11xYpoE1BTI2QWHS9HVwBoPeSzqdIwPLQMQNtRn9o6Ay6MVqEkPawtainAGLChotYCkMspnu/KPCwqCSNlrmA9dS5QyouJhJIBVUDWcF2li1DwnNogMq4qcJHhzu15jKHMicrL3KEZz4VhUJqAr1N5Uul/Py7MWVbj21SBzVWmrLuEGZfzx77vRxjf0AGtuSVGBl/sOuUV89lJP+lrfJUbwBIw4JHtJS461/ZpAnRf7BD0iIKgsk2ESicE4vhjDD8WfO/z2FhzPvZ6AM7ZW4IOx4Eqcslmf1999vZANjZeaP9S9XiseWl9O+W2z7S+vyKq94BUSVpC3HQ0sNQBy09f721cH2Dix9CrPQ8ctKgN+5wNJ9SGCQ1dC6Grdta+cdZd/99C/gL3qhJWi7BpzgAAAABJRU5ErkJggg=="
+  },
+  {
+    "title": "Google I/O 2009 - The Myth of the Genius Programmer - YouTube",
+    "href": "https://www.youtube.com/watch?v=0SARbwvhupQ",
+    "add_date": "2024-01-19T00:20:56.000Z",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABx0lEQVQ4jZ2TQWtTQRDHfzO7yUsNKSG0heJJ0YKnCvVSkHrV7+BBeu7Vk9+lH8CLN6EXk4Lo1V48lGClFBELGmmSmr73djy8fS8vll4c+LO7s7OzM///LhQmBmrg+uDtZrgIBQQAKyf/YQbiBexFt9t9niSP7ji3umrW7og0UfWL0ZaOzGYjmBxn2c/BdPpJxuNz+vDwFxxnqmaqZs4V8L5AuS6haqmqXcDpO3jCEN4YmEFmkMcxrSCSGqSh8GcGIY52Am91Ce5HJ5EYBRwbG45222HmUHVS+DX2DhASuKu3oAeolGSqCiDs7gqHh8L2thCCxOQSbxFAO9BToClzNQSJokwmsLUFgwHs78P6eklnlQho6c0axUKbTVhZgUYjHpeqCwE8kMWFxYNF9uVlGA5hbw8ODuqJzajqnPENPtfYDxU2N4OtrRVzkVDfC0V8/h2G/g98AR7ESkJF8tFRcYdzkOf15iRW6y/hlD48voCz+BbmELFrvhrG8OMjPBOAV3D7qXM791R73Var00qSJRoNTyifB5Dn+eVsNv19dTX+mmWj93n+4SWciM1LKkmqy7RoImFBqPqPfH39K7t/4A18f74nAH8Bjm35s3ZkOjEAAAAASUVORK5CYII="
+  },
+  {
+    "title": "Google I/O 2012 - The Art of Organizational Manipulation - YouTube",
+    "href": "https://www.youtube.com/watch?v=OTCuYzAw31Y",
+    "add_date": "2024-01-19T00:21:03.000Z",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABx0lEQVQ4jZ2TQWtTQRDHfzO7yUsNKSG0heJJ0YKnCvVSkHrV7+BBeu7Vk9+lH8CLN6EXk4Lo1V48lGClFBELGmmSmr73djy8fS8vll4c+LO7s7OzM///LhQmBmrg+uDtZrgIBQQAKyf/YQbiBexFt9t9niSP7ji3umrW7og0UfWL0ZaOzGYjmBxn2c/BdPpJxuNz+vDwFxxnqmaqZs4V8L5AuS6haqmqXcDpO3jCEN4YmEFmkMcxrSCSGqSh8GcGIY52Am91Ce5HJ5EYBRwbG45222HmUHVS+DX2DhASuKu3oAeolGSqCiDs7gqHh8L2thCCxOQSbxFAO9BToClzNQSJokwmsLUFgwHs78P6eklnlQho6c0axUKbTVhZgUYjHpeqCwE8kMWFxYNF9uVlGA5hbw8ODuqJzajqnPENPtfYDxU2N4OtrRVzkVDfC0V8/h2G/g98AR7ESkJF8tFRcYdzkOf15iRW6y/hlD48voCz+BbmELFrvhrG8OMjPBOAV3D7qXM791R73Var00qSJRoNTyifB5Dn+eVsNv19dTX+mmWj93n+4SWciM1LKkmqy7RoImFBqPqPfH39K7t/4A18f74nAH8Bjm35s3ZkOjEAAAAASUVORK5CYII="
+  },
+  {
+    "title": "ongoing by Tim Bray · Mourning Google",
+    "href": "https://www.tbray.org/ongoing/When/202x/2024/01/15/Google-2024#p-4",
+    "add_date": "2024-01-19T14:03:35.000Z",
+    "icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACNUlEQVQ4jYWTzW4SYRSGnxmYGZih/LVCpD8wQkldVBe68wLceBnuTVxoYnRn0oU34RUYVyYmXbiwLhtNatrUUkTaQgGBGVpgZmA+F40klRbf5fnOc7435wdmaNssis2cKWblyNc9bBXXxPusyldVYlYR6argy/UlEVF8gloaO9DEqclkQgpPvpem8qcc7JqrIq6kGbXaqI0e1UCOXNJHDsl8zhWmnEj/wl9uSwTDWQJ7XaKyx2lKZ7U+ZCcr0bAED5t9HuzvTbiJg1f3VsWHTJJ2QyGsCtTgkLLfw/e6NMISS04FFJePN3Se51fEpQLbZlHE1AjBbgtJUfn18zfdgII+gAMxT0vxaFppom0Js2uT0AO8My8aK20V18S3FZVKucv9ZBYh+nTmBMOGhb6SwPNcxqEFDN9lYPnUZQ1D89g/rPNIjJH6mbzYyMRIhFw6zhyjBZe7ZwLJSINXxiZJ2LYZO9Ac9rEx6EUFvj9gow6yflKSEiGXWiTGoHaAXh3QHo04P+tgk8Sq1qmg0ZozGKghnLE1gfWTkjTp5qf1gmhoMQ6XkxjemHa5ghHQifgKx1oPLZ5Edl1sp0GhE+Xxj11paoxOKi/erOsUU2mOqnWCwwCGrLPj9zAUQUgb8nT/4udrN9FeLIi3Nw1sf0Rt3mD5dMzR2CYeVXlRGV6Cr9zE6PGBdMc5x0rFmff6nKoOAc0n1/Kn4Csd/JW1mBevb2UIizLPShqR2jT8X23mTLFtFmee8x/sVfmncCUxxwAAAABJRU5ErkJggg=="
   }
 ]
