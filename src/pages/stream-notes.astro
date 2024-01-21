@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CalloutCard from "../components/CalloutCard.astro";
+import StreamNotes from "../components/StreamNotes.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection('stream-notes');
+allPosts.sort((a, b) => Date.parse(b.data.published) - Date.parse(a.data.published));
+---
+
+<Layout title="Posts">
+  <div class="min-h-screen container mx-auto mt-24 mb-12">
+    <div class="flex flex-wrap">
+      <div class="w-full my-12">
+        <CalloutCard>
+          <h5 class="relative mb-6 text-lg font-medium text-white">
+            &#127793; Heads up, this is a digital garden, not a blog
+            <span
+              class="absolute bottom-[-8px] left-0 w-1/2 h-0.5 bg-lightBlue"
+            >
+            </span>
+          </h5>
+          <p class="mb-2">
+            Like many, <a href="https://joelhooks.com/digital-garden">
+              Joel Hooks
+            </a> introduced me to the idea of a digital garden. Here, I focus on
+            process and ideas rather than fully-baked blog posts.
+          </p>
+          <p>If you'd like to learn more about digital gardens, I suggest reading
+            <a href="https://maggieappleton.com/garden-history">
+              <i>A Brief History & Ethos of the Digital Garden</i> by Maggie
+              Appleton
+            </a></p>
+        </CalloutCard>
+      </div>
+    </div>
+    <h2 class="text-3xl text-white mb-4">Latest Streams</h2>
+    <StreamNotes posts={allPosts} />
+  </div>
+</Layout>

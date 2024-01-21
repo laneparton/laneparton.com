@@ -5,7 +5,10 @@ tags:
   - Astro
   - JavaScript
   - Development
-description: ''
+description: >-
+  "Discover an innovative way to host/store bookmarks & links on your website
+  using JSON files generated from Google Chrome. Start organizing your bookmarks
+  today!"
 ---
 
 I've seen a few people recently on Twitter mention the idea of hosting/storing bookmarks and links their websites. For whatever reason - it hit home with me and sounded like an awesome idea!

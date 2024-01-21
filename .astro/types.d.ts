@@ -316,6 +316,15 @@ declare module 'astro:content' {
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
 };
+"stream-notes": {
+"1-19-24.md": {
+	id: "1-19-24.md";
+  slug: "1-19-24";
+  body: string;
+  collection: "stream-notes";
+  data: InferEntrySchema<"stream-notes">
+} & { render(): Render[".md"] };
+};
 
 	};
 
