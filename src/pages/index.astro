@@ -9,6 +9,25 @@ import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("posts");
 const blogPosts = allPosts.sort((a, b) => Date.parse(b.data.published) - Date.parse(a.data.published)).slice(0, 5)
+
+const socialLinks = [
+  {
+    icon: 'fa6-brands:github',
+    link: 'https://github.com/laneparton/'
+  },
+  {
+    icon: 'fa6-brands:linkedin',
+    link: 'https://www.linkedin.com/in/lane-parton/'
+  },
+  {
+    icon: 'fa6-brands:x-twitter',
+    link: 'https://twitter.com/laneparton'
+  },
+  {
+    icon: 'fa6-brands:twitch',
+    link: 'https://www.twitch.tv/laneparton'
+  }
+]
 ---
 
 <Layout title="Home">
@@ -37,30 +56,11 @@ const blogPosts = allPosts.sort((a, b) => Date.parse(b.data.published) - Date.pa
           solutions that bring smart metering data to our users in consumable formats.
         </p>
         <div class="flex text-white text-4xl social-links">
-          <a
-            href="https://github.com/laneparton/"
-            class="mx-2"
-            target="_blank"
-            aria-label="GitHub"
-          >
-            <Icon name="fa6-brands:github" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/lane-parton/"
-            class="mx-2"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <Icon name="fa6-brands:linkedin" />
-          </a>
-          <a
-            href="https://twitter.com/laneparton"
-            class="mx-2"
-            target="_blank"
-            aria-label="Twitter"
-          >
-            <Icon name="fa6-brands:x-twitter" />
-          </a>
+          {socialLinks.map(social => (
+            <a href={social.link} class="mx-2" target="_blank">
+              <Icon name={social.icon} />
+            </a>
+          ))}
         </div>
       </div>
     </div>

@@ -324,6 +324,13 @@ declare module 'astro:content' {
   collection: "stream-notes";
   data: InferEntrySchema<"stream-notes">
 } & { render(): Render[".md"] };
+"1-21-24.md": {
+	id: "1-21-24.md";
+  slug: "1-21-24";
+  body: string;
+  collection: "stream-notes";
+  data: InferEntrySchema<"stream-notes">
+} & { render(): Render[".md"] };
 };
 
 	};
