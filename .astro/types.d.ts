@@ -203,6 +203,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"creating-a-personal-assistant-llm.md": {
+	id: "creating-a-personal-assistant-llm.md";
+  slug: "creating-a-personal-assistant-llm";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "developerweek-2020-hackathon-research.md": {
 	id: "developerweek-2020-hackathon-research.md";
   slug: "developerweek-2020-hackathon-research";
