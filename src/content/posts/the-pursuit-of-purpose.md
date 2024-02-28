@@ -1,6 +1,6 @@
 ---
 title: The Pursuit of Purpose
-description:
+description: Exploring life's purpose with insights from Chris Do, Robert Greene, and Jay Garfield. Exploring the importance of finding my strengths and living a life of expertise.
 published: 2024-02-26T00:00:00.000Z
 tags:
   - Writing

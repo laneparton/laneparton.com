@@ -294,6 +294,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"the-pursuit-of-purpose.md": {
+	id: "the-pursuit-of-purpose.md";
+  slug: "the-pursuit-of-purpose";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "using-notion-as-a-website.md": {
 	id: "using-notion-as-a-website.md";
   slug: "using-notion-as-a-website";
