@@ -203,6 +203,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"crafting-the-future-how-generative-ui-will-revolutionize-the-web.md": {
+	id: "crafting-the-future-how-generative-ui-will-revolutionize-the-web.md";
+  slug: "crafting-the-future-how-generative-ui-will-revolutionize-the-web";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "creating-a-personal-assistant-llm.md": {
 	id: "creating-a-personal-assistant-llm.md";
   slug: "creating-a-personal-assistant-llm";
@@ -241,6 +248,13 @@ declare module 'astro:content' {
 "hacking-together-my-new-portfolio.md": {
 	id: "hacking-together-my-new-portfolio.md";
   slug: "hacking-together-my-new-portfolio";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
+"is-compassion-the-secret-ingredient-to-life.md": {
+	id: "is-compassion-the-secret-ingredient-to-life.md";
+  slug: "is-compassion-the-secret-ingredient-to-life";
   body: string;
   collection: "posts";
   data: InferEntrySchema<"posts">
