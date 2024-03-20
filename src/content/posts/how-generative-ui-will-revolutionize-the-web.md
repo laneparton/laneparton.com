@@ -55,7 +55,7 @@ I love the internet and building user experiences. I would be lying if I said th
 ## References
 1. [Accessibility Has Failed: Try Generative UI = Individualized UX](https://jakobnielsenphd.substack.com/p/accessibility-generative-ui)
 
-### Misc Reading:
+### Misc Reading
 - https://makedraft.com/pricing
 - https://axbom.com/nielsen-generative-ui-failure/
 - https://joefletcher.medium.com/generative-ui-and-the-downfall-of-digital-experiences-the-swift-path-to-average-5408f3fbdc6d
