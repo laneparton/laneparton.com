@@ -6,7 +6,7 @@ tags:
   - Technology
   - LLM
 description: >-
-  Explore how Generative UI is shaping the web's future by offering personalized, AI-driven user experiences that revolutionize accessibility and user onboarding.
+  Explore how Generative UI is shaping the web's future by offering personalized, AI-driven user experiences that revolutionize the way we use the web.
 ---
 I've been thinking a lot about the future of the internet - specifically from the perspective of user experience. I've been wondering - what does the future look like? Should we even be arguing about what web framework to use? Should we be looking past our present day problems towards a future where AI is even more accessible and even more embedded in our lives?
 
