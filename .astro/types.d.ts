@@ -182,6 +182,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"buzz-around-synthetic-data.md": {
+	id: "buzz-around-synthetic-data.md";
+  slug: "buzz-around-synthetic-data";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 "chat-gpt-plus-astro-intregation.md": {
 	id: "chat-gpt-plus-astro-intregation.md";
   slug: "chat-gpt-plus-astro-intregation";

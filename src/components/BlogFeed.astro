@@ -35,7 +35,7 @@ const { posts } = Astro.props;
             {dayjs(post.data.published).format("MMMM D, YYYY")}
           </div>
           <div class="flex-1 py-3 px-3 text-sm hidden lg:flex flex-wrap gap-2 items-center">
-            {post.data?.tags?.map((tag: String) => (
+            {post.data?.tags?.sort((a, b) => a.localeCompare(b)).map((tag: String) => (
               <a href={`/posts/tag/${slugify(String(tag), { lower: true })}`} class="py-0.5 px-2 border border-lightBlue text-white text-sm font-normal rounded">
                 {tag}
               </a>
