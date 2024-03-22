@@ -6,7 +6,7 @@ tags:
   - AI
   - Technology
 description: >-
-  Explore the significance of Synthetic Data in AI: cost-saving, improved accuracy, and autonomous fine-tuning for the next leap in machine learning.
+  I explored the significance of Synthetic Data in AI and recorded the interesting benefits like increased performance, improved accuracy, and autonomous fine-tuning.
 ---
 I keep hearing the term "Synthetic Data" thrown around in the AI space. I wanted to slow down for a few minutes and dissect what it means, why it's important, and where we go from here. Think of this as "Synthetic Data for Dummies" written by a dummy.
 
