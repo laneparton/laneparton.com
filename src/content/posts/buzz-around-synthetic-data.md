@@ -15,7 +15,7 @@ I'm sure most people can guess the basic concept of Synthetic Data by breaking d
 
 You can think about it this way: major LLMs like GPT, Llama, Gemini, etc. are all trained on data in the wild (hah) like the internet, research papers, whatever. Recently, researchers have found there are certain benefits to generating data with these larger models and using that dataset to train new models.
 
-*I should probably note here... that using these generated datasets to train new models is against OpenAI's TOS (and likely against other organizations' terms as well).*
+*I should probably note here... that using GPT to generate datasets used to train new models is against OpenAI's TOS (and likely against other organizations' terms as well).*
 
 ## Why is it important?
 The significance of Synthetic Data, from my basic understanding, can be broken down into three basic ideas: improving efficiency(cost), increased performance/accuracy, and better fine-tuning.
