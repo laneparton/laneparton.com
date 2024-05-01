@@ -350,6 +350,13 @@ declare module 'astro:content' {
   collection: "posts";
   data: InferEntrySchema<"posts">
 } & { render(): Render[".md"] };
+"whos-really-putting-rag-to-work-in-production.md": {
+	id: "whos-really-putting-rag-to-work-in-production.md";
+  slug: "whos-really-putting-rag-to-work-in-production";
+  body: string;
+  collection: "posts";
+  data: InferEntrySchema<"posts">
+} & { render(): Render[".md"] };
 };
 "stream-notes": {
 "1-20-24.md": {
