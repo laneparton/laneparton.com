@@ -12,19 +12,14 @@ Swyx and Alessio from LatentSpace [famously coined the title "AI Engineer"](http
 
 ## What are the typical responsibilities for this role?
 I've been looking around at job descriptions on LinkedIn in an attempt to ground this in something real. Here are a few key responsibilities that seemed to be repeated throughout my research:
-1. **Evangelize AI**
-   Be active in demonstrating the use of AI to both technical and non-technical audiences
-2. **Execute with PoC's and MVPs**
-   An AI Engineer is responsible for prototyping and exploring innovative AI solutions that are maintainable and highly scalable.
-3. **Think End-to-End**
-   Be responsible and knowledgeable in the solution from front to back - including the deployment of both models and solutions.
-4. **Never Stop Learning**
-   Stay abreast of the latest developments in AI and ML and evaluate the potential impact of new technologies on products and services.
-5. **Collaborate Across the Business**
-   Understand how to break down problems in unknown areas to understand objectives and the potential impact of AI
+1. **Evangelize AI** - Be active in demonstrating the use of AI to both technical and non-technical audiences
+2. **Execute with PoC's and MVPs** - An AI Engineer is responsible for prototyping and exploring innovative AI solutions that are maintainable and highly scalable.
+3. **Think End-to-End** - Be responsible and knowledgeable in the solution from front to back - including the deployment of both models and solutions.
+4. **Never Stop Learning** - Stay abreast of the latest developments in AI and ML and evaluate the potential impact of new technologies on products and services.
+5. **Collaborate Across the Business** - Understand how to break down problems in unknown areas to understand objectives and the potential impact of AI
 
 ## Do AI Engineers exist?
-I think there are two parts to this:
+Again, this is based on a quick look through *available* job postings on LinkedIn and people with "AI Engineer" in their profile. After searching around, I think there are two parts to consider when answering this:
 1. Do AI Engineers exist in any workplace?
 2. Are AI Engineer jobs available?
 And I think they are both answered similarly... It's sorta like a "Yes?"
