@@ -8,7 +8,7 @@ description: >-
   "Exploring the role of an AI Engineer: responsibilities, industry adoption, and self-reflection."
 ---
 
-Swyx and Alessio from LatentSpace [famously coined the title "AI Engineer"](https://www.latent.space/p/ai-engineer) and it has gained traction in adoption across the industry. I wanted to take some time to sit down and consider: what is an AI Engineer? What skills do they have? What responsibilities are typical for them? Are folks actually using this shiny new title? And perhaps, lastly, am I an AI engineer now?
+Swyx and Alessio from LatentSpace [famously coined the title "AI Engineer"](https://www.latent.space/p/ai-engineer) and it has gained adoption across the industry. I wanted to take some time to sit down and consider: What is an AI Engineer? What skills do they have? What responsibilities are typical for them? Are folks actually using this shiny new title? And perhaps, lastly, am I an AI engineer now?
 
 ## What are the typical responsibilities for this role?
 I've been looking around at job descriptions on LinkedIn in an attempt to ground this in something real. Here are a few key responsibilities that seemed to be repeated throughout my research:
