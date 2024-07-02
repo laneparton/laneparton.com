@@ -22,6 +22,7 @@ I've been looking around at job descriptions on LinkedIn in an attempt to ground
    Stay abreast of the latest developments in AI and ML and evaluate the potential impact of new technologies on products and services.
 5. **Collaborate Across the Business**
    Understand how to break down problems in unknown areas to understand objectives and the potential impact of AI
+
 ## Do AI Engineers exist?
 I think there are two parts to this:
 1. Do AI Engineers exist in any workplace?
@@ -37,7 +38,7 @@ More recently I've taken an interest in AI. I've explored a number of variations
 
 I would say given all of that - **yes**. I am exactly what comes to mind when I see AI Engineer described both in theory (blog posts) and in practice (job posts).
 
-A few resources:
+**A few resources:**
 1. https://www.linkedin.com/jobs/view/3937940348
 2. https://www.linkedin.com/jobs/view/3944617840
 3. https://www.linkedin.com/jobs/view/3955096798
